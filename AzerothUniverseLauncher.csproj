@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ProjectGuid>{C01A0EF4-321B-4C39-ADCE-11A0E00F7725}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <!-- WindowsForms est utilisé uniquement pour le sélecteur de dossier (FolderBrowserDialog) -->
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>AzerothUniverseLauncher</AssemblyName>
+    <RootNamespace>AzerothUniverseLauncher</RootNamespace>
+    <Version>3.3.9</Version>
+    <AssemblyVersion>3.3.9.0</AssemblyVersion>
+    <Company>Azeroth Universe</Company>
+    <Product>Azeroth Universe Launcher</Product>
+    <StartupObject>AzerothUniverseLauncher.App</StartupObject>
+    <!-- Décommente la ligne suivante si tu ajoutes Assets/icon.ico -->
+    <ApplicationIcon>Assets/AzerothUniverse.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Toutes les images/fonts placées dans Assets/ seront copiées à côté de l'exe -->
+    <None Remove="Assets/**" />
+    <Content Include="Assets/**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

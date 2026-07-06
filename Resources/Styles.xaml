@@ -1,0 +1,238 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- ============================================================ -->
+    <!-- PALETTE DE COULEURS                                          -->
+    <!-- ============================================================ -->
+
+    <Color x:Key="ColorBgDark">#0B0E13</Color>
+    <Color x:Key="ColorPanel">#151A22</Color>
+    <Color x:Key="ColorPanelLight">#1D2430</Color>
+    <Color x:Key="ColorGold">#C8A45C</Color>
+    <Color x:Key="ColorGoldBright">#F1D48B</Color>
+    <Color x:Key="ColorGoldDark">#7A5E2B</Color>
+    <Color x:Key="ColorTextPrimary">#ECE6D8</Color>
+    <Color x:Key="ColorTextSecondary">#9AA0AC</Color>
+    <Color x:Key="ColorOnline">#3EC96B</Color>
+    <Color x:Key="ColorOffline">#D94A4A</Color>
+
+    <SolidColorBrush x:Key="BrushBgDark" Color="{StaticResource ColorBgDark}"/>
+    <SolidColorBrush x:Key="BrushPanel" Color="{StaticResource ColorPanel}" Opacity="0.86"/>
+    <SolidColorBrush x:Key="BrushPanelSolid" Color="{StaticResource ColorPanel}"/>
+    <SolidColorBrush x:Key="BrushPanelLight" Color="{StaticResource ColorPanelLight}" Opacity="0.9"/>
+    <SolidColorBrush x:Key="BrushGold" Color="{StaticResource ColorGold}"/>
+    <SolidColorBrush x:Key="BrushGoldBright" Color="{StaticResource ColorGoldBright}"/>
+    <SolidColorBrush x:Key="BrushGoldDark" Color="{StaticResource ColorGoldDark}"/>
+    <SolidColorBrush x:Key="BrushTextPrimary" Color="{StaticResource ColorTextPrimary}"/>
+    <SolidColorBrush x:Key="BrushTextSecondary" Color="{StaticResource ColorTextSecondary}"/>
+
+    <LinearGradientBrush x:Key="BrushGoldButton" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#E9C67E" Offset="0"/>
+        <GradientStop Color="#B4863F" Offset="0.5"/>
+        <GradientStop Color="#8C6A2B" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="BrushGoldButtonHover" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#FBE0A0" Offset="0"/>
+        <GradientStop Color="#CDA050" Offset="0.5"/>
+        <GradientStop Color="#A17F3A" Offset="1"/>
+    </LinearGradientBrush>
+
+    <!-- ============================================================ -->
+    <!-- TYPOGRAPHIE                                                   -->
+    <!-- ============================================================ -->
+
+    <Style x:Key="TitleTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Cambria"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{StaticResource BrushGoldBright}"/>
+        <Setter Property="FontSize" Value="30"/>
+    </Style>
+
+    <Style x:Key="SectionHeaderStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Cambria"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{StaticResource BrushGold}"/>
+        <Setter Property="FontSize" Value="13"/>
+    </Style>
+
+    <Style x:Key="BodyTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="Foreground" Value="{StaticResource BrushTextPrimary}"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
+    <!-- ============================================================ -->
+    <!-- PANNEAUX                                                      -->
+    <!-- ============================================================ -->
+
+    <Style x:Key="PanelBorderStyle" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource BrushPanel}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BrushGoldDark}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="4"/>
+        <Setter Property="Padding" Value="16"/>
+    </Style>
+
+    <!-- ============================================================ -->
+    <!-- BOUTONS                                                       -->
+    <!-- ============================================================ -->
+
+    <!-- Bouton secondaire (contour doré, fond sombre) -->
+    <Style x:Key="GoldOutlineButtonStyle" TargetType="Button">
+        <Setter Property="Foreground" Value="{StaticResource BrushGoldBright}"/>
+        <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Padding" Value="14,8"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Background" Value="#1A2029"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BrushGoldDark}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Bg"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="3">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          Margin="{TemplateBinding Padding}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Bg" Property="BorderBrush" Value="{StaticResource BrushGoldBright}"/>
+                            <Setter TargetName="Bg" Property="Background" Value="#242C39"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.45"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Bouton principal (Jouer / Mettre à jour) : plein doré -->
+    <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+        <Setter Property="Foreground" Value="#241A08"/>
+        <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="26,10"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Background" Value="{StaticResource BrushGoldButton}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Bg"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{StaticResource BrushGoldBright}"
+                            BorderThickness="1"
+                            CornerRadius="3">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          Margin="{TemplateBinding Padding}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Bg" Property="Background" Value="{StaticResource BrushGoldButtonHover}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.4"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Boutons de la barre de titre (réduire / fermer) -->
+    <Style x:Key="TitleBarButtonStyle" TargetType="Button">
+        <Setter Property="Width" Value="34"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Foreground" Value="{StaticResource BrushTextSecondary}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="Bg" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Bg" Property="Background" Value="#2A313D"/>
+                            <Setter Property="Foreground" Value="{StaticResource BrushGoldBright}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ============================================================ -->
+    <!-- BARRE DE PROGRESSION                                          -->
+    <!-- ============================================================ -->
+
+    <Style x:Key="GoldProgressBarStyle" TargetType="ProgressBar">
+        <Setter Property="Height" Value="10"/>
+        <Setter Property="Background" Value="#1A2029"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BrushGoldDark}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Foreground" Value="{StaticResource BrushGoldButton}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ProgressBar">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                        <Grid ClipToBounds="True">
+                            <Rectangle x:Name="PART_Track"/>
+                            <Rectangle x:Name="PART_Indicator"
+                                       HorizontalAlignment="Left"
+                                       Fill="{StaticResource BrushGoldButton}"
+                                       RadiusX="4" RadiusY="4"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ============================================================ -->
+    <!-- SCROLLBAR SOMBRE                                              -->
+    <!-- ============================================================ -->
+
+    <Style x:Key="GoldScrollBarStyle" TargetType="ScrollBar">
+        <Setter Property="Width" Value="8"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ScrollBar">
+                    <Track Name="PART_Track" IsDirectionReversed="True">
+                        <Track.Thumb>
+                            <Thumb>
+                                <Thumb.Template>
+                                    <ControlTemplate TargetType="Thumb">
+                                        <Border Background="{StaticResource BrushGoldDark}" CornerRadius="4" Margin="1"/>
+                                    </ControlTemplate>
+                                </Thumb.Template>
+                            </Thumb>
+                        </Track.Thumb>
+                    </Track>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="NewsScrollViewerStyle" TargetType="ScrollViewer">
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+    </Style>
+
+</ResourceDictionary>
