@@ -1,10 +1,10 @@
 {
     "success": true,
     "version": "3.3.5a",
-    "generated_at": "2026-07-20 02:59:58",
+    "generated_at": "2026-07-20 03:16:47",
     "total_files": 994,
-    "total_size": 71516710810,
-    "total_size_mb": 68203.65,
+    "total_size": 71516205962,
+    "total_size_mb": 68203.17,
     "base_url": "https://azeroth-universe.eu/universe_client/",
     "files": [
         {
@@ -1340,9 +1340,9 @@
         {
             "path": "Data/patch-ZJ.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/patch-ZJ.MPQ",
-            "size": 15309001,
-            "md5": "0d4313de14ec14d347654ff76b2bed88",
-            "modified": 1784508697
+            "size": 14804153,
+            "md5": "fc585dd79004f98d23659f71e30dac4e",
+            "modified": 1784509787
         },
         {
             "path": "Data/patch.MPQ",
