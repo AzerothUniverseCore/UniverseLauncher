@@ -1,10 +1,10 @@
 {
     "success": true,
     "version": "3.3.5a",
-    "generated_at": "2026-07-20 04:50:45",
-    "total_files": 994,
-    "total_size": 71518729057,
-    "total_size_mb": 68205.58,
+    "generated_at": "2026-07-24 01:41:57",
+    "total_files": 1135,
+    "total_size": 75947549270,
+    "total_size_mb": 72429.23,
     "base_url": "https://azeroth-universe.eu/universe_client/",
     "files": [
         {
@@ -64,6 +64,1056 @@
             "modified": 1782930808
         },
         {
+            "path": "Data/enUS/backup-enUS.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/backup-enUS.MPQ",
+            "size": 167245856,
+            "md5": "2aa2c2c6aa341977ec15ee75d13a2429",
+            "modified": 1778337843
+        },
+        {
+            "path": "Data/enUS/base-enUS.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/base-enUS.MPQ",
+            "size": 29176975,
+            "md5": "0423b93701903133e282247b74822364",
+            "modified": 1778337733
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/bg-botleft.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/bg-botleft.jpg",
+            "size": 1864,
+            "md5": "88fa9ef2a3f5c3afcb6514ec350fa500",
+            "modified": 1778338572
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/bg-botright.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/bg-botright.jpg",
+            "size": 1691,
+            "md5": "2855472c63c207258965d48626c1b6a5",
+            "modified": 1778338572
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/bg-bottom.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/bg-bottom.jpg",
+            "size": 2939,
+            "md5": "cbde9fcb111f4749709bf420a4db5c82",
+            "modified": 1778338572
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/bg-left.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/bg-left.jpg",
+            "size": 2478,
+            "md5": "6db96970231e840541ff83e52900fcb5",
+            "modified": 1778338572
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/bg-merge.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/bg-merge.jpg",
+            "size": 375,
+            "md5": "8e8795064c12cbed1b9346570638946d",
+            "modified": 1778338572
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/bg-mergebot.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/bg-mergebot.jpg",
+            "size": 592,
+            "md5": "f8d86992052c8866bfd5d309bfce2f60",
+            "modified": 1778338572
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/bg-middle.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/bg-middle.jpg",
+            "size": 1235,
+            "md5": "b5bf49c1f073e592ec636761602fe238",
+            "modified": 1778338572
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/bg-right.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/bg-right.jpg",
+            "size": 2262,
+            "md5": "cd0b05de435c6bf685581e3d6060a01e",
+            "modified": 1778338572
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/bg-top.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/bg-top.jpg",
+            "size": 7773,
+            "md5": "a2e72071398e22f4c8e817308066d838",
+            "modified": 1778338572
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/Blizz.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/Blizz.jpg",
+            "size": 25635,
+            "md5": "c489e82a9749eb80fe623410ba48dcb3",
+            "modified": 1778338573
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/BLWidget.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/BLWidget.jpg",
+            "size": 9497,
+            "md5": "df8a0a2ebe1bae6ed292696e9e3f85b9",
+            "modified": 1778338573
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/BRWidget.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/BRWidget.jpg",
+            "size": 9454,
+            "md5": "3ce62a44b28f879d80410219cc451f64",
+            "modified": 1778338573
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/contactinfo-over.gif",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/contactinfo-over.gif",
+            "size": 2877,
+            "md5": "f575d98acc17aecd3768d6770a9acaea",
+            "modified": 1778338747
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/contactinfo.gif",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/contactinfo.gif",
+            "size": 2453,
+            "md5": "542100c0e5bc4bf21ecd3716a0d397e7",
+            "modified": 1778338747
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/mac-over.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/mac-over.jpg",
+            "size": 1971,
+            "md5": "22732e32273fc6f82363bd1bcfda8e61",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/mac.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/mac.jpg",
+            "size": 1893,
+            "md5": "73a69959b02c35f87edc512e040aa8a0",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/pc-over.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/pc-over.jpg",
+            "size": 1901,
+            "md5": "a93dcffb37ee6a15ca104b1aab1e23fd",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/pc.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/pc.jpg",
+            "size": 1809,
+            "md5": "e26f2addf31d13ac470ed3d511f3954c",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/readme-over.gif",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/readme-over.gif",
+            "size": 2522,
+            "md5": "7a8660f9f6d6be8fcd1e9db36e085c50",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/readme.gif",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/readme.gif",
+            "size": 2232,
+            "md5": "e019cee61e0a03d99c233caf5fdce5e2",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/readme.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/readme.jpg",
+            "size": 3341,
+            "md5": "a57ab10222beabffbcdff91673799775",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/troubleshooting-over.gif",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/troubleshooting-over.gif",
+            "size": 3190,
+            "md5": "0ea9f5f080d17e3dbccd92ed30c2dd26",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/troubleshooting.gif",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/troubleshooting.gif",
+            "size": 3150,
+            "md5": "e466fefb3c864c12802976f5dc7f17d4",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/troubleshooting.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/troubleshooting.jpg",
+            "size": 4363,
+            "md5": "ef4305cc3d8199f3c6caec06144f462c",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/website-over.gif",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/website-over.gif",
+            "size": 2239,
+            "md5": "f472f388d2e652db3e13c72f2fff926a",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/buttons/website.gif",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/buttons/website.gif",
+            "size": 2103,
+            "md5": "ccf1076b213b7441679769500536e3be",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/BWidget.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/BWidget.jpg",
+            "size": 10358,
+            "md5": "0e77aa64029af11d503add88c9b6f1fb",
+            "modified": 1778338573
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/CRepeat.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/CRepeat.jpg",
+            "size": 18653,
+            "md5": "8e730b47b708d500142c955c6a342ed1",
+            "modified": 1778338574
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/dragon-left.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/dragon-left.jpg",
+            "size": 2718,
+            "md5": "a8cd5cd7f1a05fa89ef1ad66e6c7aa96",
+            "modified": 1778338574
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/dragon-right.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/dragon-right.jpg",
+            "size": 2037,
+            "md5": "834894862daa2c8b3a976350eb56055a",
+            "modified": 1778338574
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/gryphon-right.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/gryphon-right.jpg",
+            "size": 930,
+            "md5": "29f0d05380cf5d7cc19b6395f8ecb17f",
+            "modified": 1778338575
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/help-request.gif",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/help-request.gif",
+            "size": 543,
+            "md5": "1c49be42d4bff0a122ce4cb1537cf877",
+            "modified": 1778338575
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/ItemMarker.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/ItemMarker.jpg",
+            "size": 19551,
+            "md5": "0d5832e88375abd18e1b9d01bdb64000",
+            "modified": 1778338575
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/logo-blizzard.gif",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/logo-blizzard.gif",
+            "size": 10253,
+            "md5": "08d46e1c0dee49b43bf23118ce09aec2",
+            "modified": 1778338575
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/logo-bnet.gif",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/logo-bnet.gif",
+            "size": 10357,
+            "md5": "79971460890ad43ca39fc3ad0260d9bc",
+            "modified": 1778338576
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/logo-wow.gif",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/logo-wow.gif",
+            "size": 22940,
+            "md5": "d25238958e7600d84d037fe4d9b0ec4a",
+            "modified": 1778338576
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/LRepeat.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/LRepeat.jpg",
+            "size": 13245,
+            "md5": "71e2154610445c84023ee5b1afac4175",
+            "modified": 1778338576
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/MacLogo.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/MacLogo.jpg",
+            "size": 15588,
+            "md5": "b76842e74f79ff25130805c36acef70e",
+            "modified": 1778338576
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/PCLogo.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/PCLogo.jpg",
+            "size": 1385,
+            "md5": "ef94317c97b138ecea2484a3285c83ab",
+            "modified": 1778338576
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/pixel.gif",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/pixel.gif",
+            "size": 43,
+            "md5": "325472601571f31e1bf00674c368d335",
+            "modified": 1778338576
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/RRepeat.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/RRepeat.jpg",
+            "size": 13460,
+            "md5": "929a96b2c9908775ef80103b06ac93de",
+            "modified": 1778338576
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/splash.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/splash.jpg",
+            "size": 53481,
+            "md5": "12bde83a0937ae8c9d03f4990a2525e3",
+            "modified": 1778338576
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/title-troubleshooting.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/title-troubleshooting.jpg",
+            "size": 10788,
+            "md5": "b314e83db91fd942989a238afcc21c3e",
+            "modified": 1778338576
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/titles/contactinfo-mac.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/titles/contactinfo-mac.jpg",
+            "size": 12230,
+            "md5": "e9552f43b9daa0e52a5dfd6a4c61640f",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/titles/contactinfo-pc.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/titles/contactinfo-pc.jpg",
+            "size": 12258,
+            "md5": "4a7d6f5a18ad3502f0772b2b77d03be4",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/titles/readme-mac.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/titles/readme-mac.jpg",
+            "size": 10263,
+            "md5": "bc55ee7a92e7335a24c2c5fccf0e3f02",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/titles/readme-pc.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/titles/readme-pc.jpg",
+            "size": 10300,
+            "md5": "94a9261aadb72fd1dc78a2cd6c06294d",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/titles/troubleshooting-mac.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/titles/troubleshooting-mac.jpg",
+            "size": 12193,
+            "md5": "b0cb4b865a5d384d6e00e2e36806b3cd",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/titles/troubleshooting-pc.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/titles/troubleshooting-pc.jpg",
+            "size": 12231,
+            "md5": "116f72fcbdb368f67dd0985ba29898d4",
+            "modified": 1778338748
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/TLWidget.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/TLWidget.jpg",
+            "size": 9481,
+            "md5": "a60268c3c008a4c75370a4ba20ba6745",
+            "modified": 1778338577
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/TRWidget.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/TRWidget.jpg",
+            "size": 9440,
+            "md5": "cc2dc6c673134b5abd30709bb2e5b412",
+            "modified": 1778338577
+        },
+        {
+            "path": "Data/enUS/Documentation/Images/TWidget.jpg",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Images/TWidget.jpg",
+            "size": 10340,
+            "md5": "d085d2a56eecc0409ff7ec7c5dc12c24",
+            "modified": 1778338577
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/BSpacer.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/BSpacer.html",
+            "size": 733,
+            "md5": "a6293395cfcac69cd8f0454efbed7a53",
+            "modified": 1778338577
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/CSpacer.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/CSpacer.html",
+            "size": 306,
+            "md5": "42d167b3a3a156a699c3580274f19211",
+            "modified": 1778338577
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/Detector.js",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/Detector.js",
+            "size": 377,
+            "md5": "2ca01abba85888082d19f6177e4efcb3",
+            "modified": 1778338577
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/Greeting.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/Greeting.html",
+            "size": 1318,
+            "md5": "64d9f8d69c9da6388c612658d5173d01",
+            "modified": 1778338577
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/Index.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/Index.html",
+            "size": 1638,
+            "md5": "19c7a25c2c7a95c4f1feae358ba5c678",
+            "modified": 1778338577
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/LBorder.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/LBorder.html",
+            "size": 335,
+            "md5": "5cae15ff70bb36d1139e62c805c1197e",
+            "modified": 1778338577
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/Nav.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/Nav.html",
+            "size": 1944,
+            "md5": "8fe52dfef68eaf88da3bd9836c665807",
+            "modified": 1778338577
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/RBorder.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/RBorder.html",
+            "size": 346,
+            "md5": "450f8c6e4f0aaae19c9baa68da6e852e",
+            "modified": 1778338577
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/Requirements.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/Requirements.html",
+            "size": 1379,
+            "md5": "df274c3a1814925afe0f1f2e1b99c3d1",
+            "modified": 1778338577
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/Splash.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/Splash.html",
+            "size": 772,
+            "md5": "5488d3c8561d120ecdb9396d125e0019",
+            "modified": 1778338578
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/Styles.css",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/Styles.css",
+            "size": 5953,
+            "md5": "d2b0ed855885b46b9b1c61babfe568cc",
+            "modified": 1778338578
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/StylesLeft.css",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/StylesLeft.css",
+            "size": 5694,
+            "md5": "e33b0baef846264f1923bfedbed03262",
+            "modified": 1778338578
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/TBorder.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/TBorder.html",
+            "size": 2713,
+            "md5": "2b3ed54a68bb29c251d0a3d921afbf44",
+            "modified": 1778338578
+        },
+        {
+            "path": "Data/enUS/Documentation/Layout/TheScript.js",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Layout/TheScript.js",
+            "size": 7461,
+            "md5": "5fae50420a62b877ebc2d7f312e27c3a",
+            "modified": 1778338578
+        },
+        {
+            "path": "Data/enUS/Documentation/Manual.pdf",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Manual.pdf",
+            "size": 2581831,
+            "md5": "b8446d3d6f34a651412bfa58a8198de8",
+            "modified": 1778338563
+        },
+        {
+            "path": "Data/enUS/Documentation/Manual_TBC.pdf",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Manual_TBC.pdf",
+            "size": 1281553,
+            "md5": "970217a0e99be82453f356aed05120ea",
+            "modified": 1778338563
+        },
+        {
+            "path": "Data/enUS/Documentation/Manual_WLK.pdf",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Manual_WLK.pdf",
+            "size": 1298657,
+            "md5": "6da468b76bd2d9c6a80e5cc723bc44f9",
+            "modified": 1778338564
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/(Mac)Foreword.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/%28Mac%29Foreword.html",
+            "size": 1300,
+            "md5": "5098f3cf400768ac2ee0a3defdef85f4",
+            "modified": 1778338578
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/(Mac)Installation.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/%28Mac%29Installation.html",
+            "size": 1386,
+            "md5": "c2a65679d2df6a59d5617b8cbbfd0bf9",
+            "modified": 1778338578
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/(Mac)Patching.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/%28Mac%29Patching.html",
+            "size": 1242,
+            "md5": "817eb4f463888dd7dcd1c7c708b38e17",
+            "modified": 1778338578
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/(Mac)ReadMeMenu.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/%28Mac%29ReadMeMenu.html",
+            "size": 2155,
+            "md5": "f0c17ac3fcef5c06489d04075a40ce84",
+            "modified": 1778338578
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/(Mac)SystemRequirements.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/%28Mac%29SystemRequirements.html",
+            "size": 2145,
+            "md5": "83014674bcedd9b7dcd91ef20429bbf6",
+            "modified": 1778338578
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/(Mac)Uninstall.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/%28Mac%29Uninstall.html",
+            "size": 1700,
+            "md5": "fd1b001fcd9f542a76ed6b4cde348169",
+            "modified": 1778338578
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/(PC)Foreword.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/%28PC%29Foreword.html",
+            "size": 1300,
+            "md5": "5098f3cf400768ac2ee0a3defdef85f4",
+            "modified": 1778338578
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/(PC)Installation.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/%28PC%29Installation.html",
+            "size": 1783,
+            "md5": "6fef5f4dc8adfebb024c16a104daf1bd",
+            "modified": 1778338579
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/(PC)Patching.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/%28PC%29Patching.html",
+            "size": 1240,
+            "md5": "bf62c51c22bb58860388cdcd8dc17c2e",
+            "modified": 1778338579
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/(PC)ReadMeMenu.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/%28PC%29ReadMeMenu.html",
+            "size": 2155,
+            "md5": "38041e944fffda415fdf69e07599e2b6",
+            "modified": 1778338579
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/(PC)SystemRequirements.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/%28PC%29SystemRequirements.html",
+            "size": 2444,
+            "md5": "32fbecbfafce0d6bbebd831a35b190ed",
+            "modified": 1778338579
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/(PC)Uninstall.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/%28PC%29Uninstall.html",
+            "size": 2078,
+            "md5": "73e7e9e6ca84a9abb1e6f6cf633f0ccd",
+            "modified": 1778338579
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/BasicCommands.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/BasicCommands.html",
+            "size": 15683,
+            "md5": "af1c06c7b8811f10c5f16f8ebd38e873",
+            "modified": 1778338579
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/CharacterNaming.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/CharacterNaming.html",
+            "size": 1694,
+            "md5": "d9c1ddc07052ce85f6a7951b0bf9caf3",
+            "modified": 1778338579
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/EULA.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/EULA.html",
+            "size": 25730,
+            "md5": "c4bc0d676478453953181c81f6f052dc",
+            "modified": 1778338579
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/GettingStarted.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/GettingStarted.html",
+            "size": 3859,
+            "md5": "c9ab83a81fe0074e756e177a3543ba09",
+            "modified": 1778338579
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/ManualErrata.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/ManualErrata.html",
+            "size": 1143,
+            "md5": "31f7e676c783808281c6d8b050313f5d",
+            "modified": 1778338579
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe/RealmSelection.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe/RealmSelection.html",
+            "size": 2892,
+            "md5": "c80d8243362046c41a1c0005e96db79c",
+            "modified": 1778338580
+        },
+        {
+            "path": "Data/enUS/Documentation/ReadMe.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/ReadMe.html",
+            "size": 1657,
+            "md5": "faea5a4890767ef4fe419245ff4fcc83",
+            "modified": 1778338564
+        },
+        {
+            "path": "Data/enUS/Documentation/Support/(Mac)SupportMenu.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Support/%28Mac%29SupportMenu.html",
+            "size": 3704,
+            "md5": "e292dd47429d5b4c6ae1667c212c70d4",
+            "modified": 1778338580
+        },
+        {
+            "path": "Data/enUS/Documentation/Support/(Mac)TechnicalSupport.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Support/%28Mac%29TechnicalSupport.html",
+            "size": 3041,
+            "md5": "bf54f0af550b443579ea2b7a76da79c0",
+            "modified": 1778338580
+        },
+        {
+            "path": "Data/enUS/Documentation/Support/(PC)SupportMenu.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Support/%28PC%29SupportMenu.html",
+            "size": 3707,
+            "md5": "48e90a71788e935cb32bd52011df7fcf",
+            "modified": 1778338580
+        },
+        {
+            "path": "Data/enUS/Documentation/Support/(PC)TechnicalSupport.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Support/%28PC%29TechnicalSupport.html",
+            "size": 5391,
+            "md5": "8a37e2b39d4a145b2458b983447aff8a",
+            "modified": 1778338580
+        },
+        {
+            "path": "Data/enUS/Documentation/Support/AccountAdministration.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Support/AccountAdministration.html",
+            "size": 4501,
+            "md5": "ee0e98844605d4bf6ccae52a041b7c53",
+            "modified": 1778338580
+        },
+        {
+            "path": "Data/enUS/Documentation/Support/BlizzardInsider.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Support/BlizzardInsider.html",
+            "size": 3478,
+            "md5": "2cd9db4b8cfffc4b01ee31a0c9582a5a",
+            "modified": 1778338580
+        },
+        {
+            "path": "Data/enUS/Documentation/Support/Employment.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Support/Employment.html",
+            "size": 3424,
+            "md5": "562ffee219d3fa9d46c89a936047f718",
+            "modified": 1778338581
+        },
+        {
+            "path": "Data/enUS/Documentation/Support/GameSuggestions.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Support/GameSuggestions.html",
+            "size": 1201,
+            "md5": "9dcb2a30819df18f70402d5f7a58a6cc",
+            "modified": 1778338581
+        },
+        {
+            "path": "Data/enUS/Documentation/Support/GameSupport.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Support/GameSupport.html",
+            "size": 3495,
+            "md5": "63d87e08428f63cad7daf2086b0e83d4",
+            "modified": 1778338581
+        },
+        {
+            "path": "Data/enUS/Documentation/Support/Password.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Support/Password.html",
+            "size": 2909,
+            "md5": "a939a4b7e168191c123af4413f215cb0",
+            "modified": 1778338581
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(Mac)AudioProblems.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28Mac%29AudioProblems.html",
+            "size": 1509,
+            "md5": "d8e87219838cdc57b90e92a07f74aa59",
+            "modified": 1778338581
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(Mac)BlizzardDownloaderProblems.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28Mac%29BlizzardDownloaderProblems.html",
+            "size": 3026,
+            "md5": "0b882fd93e2b7c625350d3198948c1bb",
+            "modified": 1778338581
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(Mac)ConnectionLoginProblems.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28Mac%29ConnectionLoginProblems.html",
+            "size": 6489,
+            "md5": "f26dac265db4980e571576f1b8071904",
+            "modified": 1778338581
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(Mac)GameplayProblems.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28Mac%29GameplayProblems.html",
+            "size": 2459,
+            "md5": "cb52ee8607f6540e71888ce8ac4d1679",
+            "modified": 1778338582
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(Mac)Install.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28Mac%29Install.html",
+            "size": 1000,
+            "md5": "7fa96b774ff6098fd73b8da410c0fa61",
+            "modified": 1778338582
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(Mac)PreventiveMaintenance.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28Mac%29PreventiveMaintenance.html",
+            "size": 4667,
+            "md5": "dff865a6bfb0e6d68428f754953a990f",
+            "modified": 1778338582
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(Mac)StartupProblems.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28Mac%29StartupProblems.html",
+            "size": 5218,
+            "md5": "b47314ac4745257c84235dc3ad01f1cc",
+            "modified": 1778338582
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(Mac)TroubleshootingMenu.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28Mac%29TroubleshootingMenu.html",
+            "size": 2122,
+            "md5": "635f884af1dbc1412f49a50c15e54bc9",
+            "modified": 1778338582
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(Mac)VideoProblems.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28Mac%29VideoProblems.html",
+            "size": 7205,
+            "md5": "c10a2ac3165f243c828a361ce5fa2c14",
+            "modified": 1778338583
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(PC)AudioProblems.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28PC%29AudioProblems.html",
+            "size": 4591,
+            "md5": "cd67e2e4ff26c15fbdb06f8bd4482a6f",
+            "modified": 1778338583
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(PC)BlizzardDownloaderProblems.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28PC%29BlizzardDownloaderProblems.html",
+            "size": 4261,
+            "md5": "5837ff061c6d9e0927ef41a55b679f62",
+            "modified": 1778338583
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(PC)ConnectionLoginProblems.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28PC%29ConnectionLoginProblems.html",
+            "size": 6143,
+            "md5": "1492bb630026ba2dd6ae4f87234c5fdd",
+            "modified": 1778338584
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(PC)GameplayProblems.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28PC%29GameplayProblems.html",
+            "size": 2458,
+            "md5": "7385a1dc4f68f6898a58d5623b949c68",
+            "modified": 1778338584
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(PC)Install.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28PC%29Install.html",
+            "size": 2277,
+            "md5": "47d5eac724722e7caed7a727a5fb1441",
+            "modified": 1778338584
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(PC)PreventiveMaintenance.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28PC%29PreventiveMaintenance.html",
+            "size": 7808,
+            "md5": "58f82ac4c10d90b0bf4dfab0b4aa3890",
+            "modified": 1778338584
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(PC)StartupProblems.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28PC%29StartupProblems.html",
+            "size": 5282,
+            "md5": "f09cd63d79642e2220db5dd1dfb03813",
+            "modified": 1778338584
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(PC)TroubleshootingMenu.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28PC%29TroubleshootingMenu.html",
+            "size": 2099,
+            "md5": "ae008b8cb1911473d922ce00ad05a408",
+            "modified": 1778338585
+        },
+        {
+            "path": "Data/enUS/Documentation/Troubleshooting/(PC)VideoProblems.html",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Documentation/Troubleshooting/%28PC%29VideoProblems.html",
+            "size": 8431,
+            "md5": "99c3330e0a384fd4026e4acb129c0991",
+            "modified": 1778338585
+        },
+        {
+            "path": "Data/enUS/expansion-locale-enUS.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/expansion-locale-enUS.MPQ",
+            "size": 17389181,
+            "md5": "c9b1786849ade7f399c57da8c61fe352",
+            "modified": 1778337853
+        },
+        {
+            "path": "Data/enUS/expansion-speech-enUS.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/expansion-speech-enUS.MPQ",
+            "size": 241033297,
+            "md5": "4077b16db9fe39f81fadbb2098ece280",
+            "modified": 1778337899
+        },
+        {
+            "path": "Data/enUS/Interface/Cinematics/Logo_1024.avi",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Interface/Cinematics/Logo_1024.avi",
+            "size": 6506496,
+            "md5": "173a1a1db0df7d86c89919bd78c30d5d",
+            "modified": 1778338587
+        },
+        {
+            "path": "Data/enUS/Interface/Cinematics/Logo_800.avi",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Interface/Cinematics/Logo_800.avi",
+            "size": 4589568,
+            "md5": "ad7c1a061ef0bf8b93936f2386a72311",
+            "modified": 1778338593
+        },
+        {
+            "path": "Data/enUS/Interface/Cinematics/WOW_FotLK_1024.avi",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Interface/Cinematics/WOW_FotLK_1024.avi",
+            "size": 66007136,
+            "md5": "472233ce06d86b56741fe25f07bc5f57",
+            "modified": 1778338600
+        },
+        {
+            "path": "Data/enUS/Interface/Cinematics/WOW_FotLK_800.avi",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Interface/Cinematics/WOW_FotLK_800.avi",
+            "size": 57244820,
+            "md5": "9de551d4748b568828e0656414e66742",
+            "modified": 1778338603
+        },
+        {
+            "path": "Data/enUS/Interface/Cinematics/WOW_Intro_1024.avi",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Interface/Cinematics/WOW_Intro_1024.avi",
+            "size": 47632384,
+            "md5": "5a51f34a97936f99ea1fd805c6ba8c06",
+            "modified": 1778338610
+        },
+        {
+            "path": "Data/enUS/Interface/Cinematics/WOW_Intro_800.avi",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Interface/Cinematics/WOW_Intro_800.avi",
+            "size": 41175040,
+            "md5": "d9a970cfdaaa17379e12bd734ab35c3d",
+            "modified": 1778338610
+        },
+        {
+            "path": "Data/enUS/Interface/Cinematics/WOW_Intro_BC_1024.avi",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Interface/Cinematics/WOW_Intro_BC_1024.avi",
+            "size": 47577088,
+            "md5": "8b79c86f8569874630fa61c5847257ed",
+            "modified": 1778338617
+        },
+        {
+            "path": "Data/enUS/Interface/Cinematics/WOW_Intro_BC_800.avi",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Interface/Cinematics/WOW_Intro_BC_800.avi",
+            "size": 41263104,
+            "md5": "e412052035456a6100f57bac90c774cb",
+            "modified": 1778338618
+        },
+        {
+            "path": "Data/enUS/Interface/Cinematics/WOW_Intro_LK_1024.avi",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Interface/Cinematics/WOW_Intro_LK_1024.avi",
+            "size": 56177056,
+            "md5": "c23fa8b6010d8d3e4a50847b6dcad2a8",
+            "modified": 1778338626
+        },
+        {
+            "path": "Data/enUS/Interface/Cinematics/WOW_Intro_LK_800.avi",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Interface/Cinematics/WOW_Intro_LK_800.avi",
+            "size": 48820376,
+            "md5": "9445487724a0c399f200c3887420d1f8",
+            "modified": 1778338627
+        },
+        {
+            "path": "Data/enUS/Interface/Cinematics/WOW_Wrathgate_1024.avi",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Interface/Cinematics/WOW_Wrathgate_1024.avi",
+            "size": 75685834,
+            "md5": "18ab382e7a46c2d68f19a48402968ffa",
+            "modified": 1778338640
+        },
+        {
+            "path": "Data/enUS/Interface/Cinematics/WOW_Wrathgate_800.avi",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/Interface/Cinematics/WOW_Wrathgate_800.avi",
+            "size": 65683896,
+            "md5": "9818fcde3357e0bdafe38936be35f3b7",
+            "modified": 1778338638
+        },
+        {
+            "path": "Data/enUS/lichking-locale-enUS.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/lichking-locale-enUS.MPQ",
+            "size": 12354378,
+            "md5": "af01bc97ca87104c589d4d84684d3b4e",
+            "modified": 1778337902
+        },
+        {
+            "path": "Data/enUS/lichking-speech-enUS.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/lichking-speech-enUS.MPQ",
+            "size": 354008839,
+            "md5": "be2a6737bb323b700c3d750ca9b72709",
+            "modified": 1778337946
+        },
+        {
+            "path": "Data/enUS/locale-enUS.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/locale-enUS.MPQ",
+            "size": 204291376,
+            "md5": "6a2d75fad8d317b0bedaa4f82f9340a5",
+            "modified": 1778337961
+        },
+        {
+            "path": "Data/enUS/patch-enUS-2.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/patch-enUS-2.MPQ",
+            "size": 225570171,
+            "md5": "2352dfdbb85174d80b748a1111c56ee9",
+            "modified": 1778337977
+        },
+        {
+            "path": "Data/enUS/patch-enUS-3.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/patch-enUS-3.MPQ",
+            "size": 100373935,
+            "md5": "5514621925fa8cd17e864fabcbf85b4a",
+            "modified": 1778337984
+        },
+        {
+            "path": "Data/enUS/patch-enUS-4.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/patch-enUS-4.MPQ",
+            "size": 1265962824,
+            "md5": "e2453ee3cea345d57e243ca31c85ea25",
+            "modified": 1784646336
+        },
+        {
+            "path": "Data/enUS/patch-enUS-5.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/patch-enUS-5.MPQ",
+            "size": 94675,
+            "md5": "25593238f916c58e9b633cb54f4f96e8",
+            "modified": 1745929082
+        },
+        {
+            "path": "Data/enUS/patch-enUS-6.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/patch-enUS-6.MPQ",
+            "size": 584355,
+            "md5": "6612a451d941138f0dafaf99830f9577",
+            "modified": 1760112526
+        },
+        {
+            "path": "Data/enUS/patch-enUS-7.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/patch-enUS-7.MPQ",
+            "size": 335634589,
+            "md5": "7898a1b6674d942688fad55240390949",
+            "modified": 1782941975
+        },
+        {
+            "path": "Data/enUS/patch-enUS-8.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/patch-enUS-8.MPQ",
+            "size": 279707,
+            "md5": "c85f1957f0267574f672f27f2a627c54",
+            "modified": 1761507040
+        },
+        {
+            "path": "Data/enUS/patch-enUS-9.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/patch-enUS-9.MPQ",
+            "size": 428320,
+            "md5": "c58a16b5c185c6dd850d1378b1564fc1",
+            "modified": 1780105185
+        },
+        {
+            "path": "Data/enUS/patch-enUS-U.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/patch-enUS-U.MPQ",
+            "size": 830372,
+            "md5": "e4bd7ee361e82da4e27896528eb0ba53",
+            "modified": 1780241758
+        },
+        {
+            "path": "Data/enUS/patch-enUS-V.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/patch-enUS-V.MPQ",
+            "size": 186110251,
+            "md5": "34fad0b018a36b42c61d055c8b5b26e8",
+            "modified": 1784837431
+        },
+        {
+            "path": "Data/enUS/patch-enUS-X.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/patch-enUS-X.MPQ",
+            "size": 40581,
+            "md5": "2bcbfabf35bda14707ef0cc888d45f6c",
+            "modified": 1783291361
+        },
+        {
+            "path": "Data/enUS/patch-enUS.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/patch-enUS.MPQ",
+            "size": 296616080,
+            "md5": "273cc8a0137dbc6f978c74acaa809098",
+            "modified": 1778338034
+        },
+        {
+            "path": "Data/enUS/realmlist.wtf",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/realmlist.wtf",
+            "size": 20,
+            "md5": "bedac2f9304d8db4d7d2f166bf827d5a",
+            "modified": 1750026348
+        },
+        {
+            "path": "Data/enUS/speech-enUS.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/speech-enUS.MPQ",
+            "size": 438430439,
+            "md5": "965021d466779f68407965f4759c5cc6",
+            "modified": 1778338058
+        },
+        {
+            "path": "Data/enUS/WTF/DefaultBindings.wtf",
+            "url": "https://azeroth-universe.eu/universe_client/Data/enUS/WTF/DefaultBindings.wtf",
+            "size": 4227,
+            "md5": "eb1943bea55e6bf9377d4839fe835d9b",
+            "modified": 1401536102
+        },
+        {
             "path": "Data/expansion.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/expansion.MPQ",
             "size": 65637,
@@ -75,14 +1125,14 @@
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/backup-frFR.MPQ",
             "size": 25781614,
             "md5": "631499a3a4d51771655eedf3a49c147e",
-            "modified": 1782930821
+            "modified": 1673101422
         },
         {
             "path": "Data/frFR/base-frFR.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/base-frFR.MPQ",
             "size": 31106174,
             "md5": "4936a8dc4a703bebd6d9c8d28fe21b46",
-            "modified": 1782930817
+            "modified": 1632848948
         },
         {
             "path": "Data/frFR/Documentation/Images/bg-botleft.jpg",
@@ -908,14 +1958,14 @@
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/expansion-locale-frFR.MPQ",
             "size": 17389223,
             "md5": "c02e1bb206c11783e2c6041ec397fa2f",
-            "modified": 1782930807
+            "modified": 1632848948
         },
         {
             "path": "Data/frFR/expansion-speech-frFR.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/expansion-speech-frFR.MPQ",
             "size": 265532992,
             "md5": "53f8639a575fb6a02bc73036d746024b",
-            "modified": 1782930812
+            "modified": 1632848958
         },
         {
             "path": "Data/frFR/Interface/Cinematics/Logo_1024.avi",
@@ -1006,70 +2056,70 @@
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/lichking-locale-frFR.MPQ",
             "size": 12624210,
             "md5": "4ff5e82f97556ea143663d5f5292eb49",
-            "modified": 1782930795
+            "modified": 1401538256
         },
         {
             "path": "Data/frFR/lichking-speech-frFR.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/lichking-speech-frFR.MPQ",
             "size": 20532786,
             "md5": "b5178311f40714ea9984bc8aed89a650",
-            "modified": 1782930792
+            "modified": 1632848960
         },
         {
             "path": "Data/frFR/locale-frFR.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/locale-frFR.MPQ",
             "size": 202038314,
             "md5": "f82c195220e8c89805ba25b0640c3dfa",
-            "modified": 1782930792
+            "modified": 1401538256
         },
         {
             "path": "Data/frFR/patch-frFR-2.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/patch-frFR-2.MPQ",
             "size": 226194452,
             "md5": "44283dfdac9ced6f95d61cd1c72441c1",
-            "modified": 1782931080
+            "modified": 1656864594
         },
         {
             "path": "Data/frFR/patch-frFR-3.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/patch-frFR-3.MPQ",
             "size": 1254752813,
             "md5": "92072961b047cd992164be18f000572d",
-            "modified": 1782882378
+            "modified": 1782606834
         },
         {
             "path": "Data/frFR/patch-frFR-4.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/patch-frFR-4.MPQ",
             "size": 94675,
             "md5": "25593238f916c58e9b633cb54f4f96e8",
-            "modified": 1782882310
+            "modified": 1745929082
         },
         {
             "path": "Data/frFR/patch-frFR-5.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/patch-frFR-5.MPQ",
             "size": 584355,
             "md5": "6612a451d941138f0dafaf99830f9577",
-            "modified": 1782882306
+            "modified": 1760112526
         },
         {
             "path": "Data/frFR/patch-frFR-6.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/patch-frFR-6.MPQ",
             "size": 335634589,
             "md5": "7898a1b6674d942688fad55240390949",
-            "modified": 1783363109
+            "modified": 1782941975
         },
         {
             "path": "Data/frFR/patch-frFR-7.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/patch-frFR-7.MPQ",
             "size": 279707,
             "md5": "c85f1957f0267574f672f27f2a627c54",
-            "modified": 1782882298
+            "modified": 1761507040
         },
         {
             "path": "Data/frFR/patch-frFR-8.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/patch-frFR-8.MPQ",
             "size": 428320,
             "md5": "c58a16b5c185c6dd850d1378b1564fc1",
-            "modified": 1782882295
+            "modified": 1780105185
         },
         {
             "path": "Data/frFR/patch-frFR-U.MPQ",
@@ -1077,6 +2127,20 @@
             "size": 830372,
             "md5": "e4bd7ee361e82da4e27896528eb0ba53",
             "modified": 1780241758
+        },
+        {
+            "path": "Data/frFR/patch-frFR-V.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/frFR/patch-frFR-V.MPQ",
+            "size": 176778272,
+            "md5": "e1695295a931708b14858c38c858231f",
+            "modified": 1784834808
+        },
+        {
+            "path": "Data/frFR/patch-frFR-W.MPQ",
+            "url": "https://azeroth-universe.eu/universe_client/Data/frFR/patch-frFR-W.MPQ",
+            "size": 48698422,
+            "md5": "0fc0448b7f75ea473fa22bb6c1f67a44",
+            "modified": 1784840787
         },
         {
             "path": "Data/frFR/patch-frFR-X.MPQ",
@@ -1090,7 +2154,7 @@
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/patch-frFR.MPQ",
             "size": 552099698,
             "md5": "c1e906291b4df32871fea3b2a54ee059",
-            "modified": 1782930762
+            "modified": 1656864556
         },
         {
             "path": "Data/frFR/realmlist.wtf",
@@ -1104,7 +2168,7 @@
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/speech-frFR.MPQ",
             "size": 441962210,
             "md5": "0dfc0ade6500dc5fd3693895482fc5bd",
-            "modified": 1782882280
+            "modified": 1632849018
         },
         {
             "path": "Data/frFR/WTF/DefaultBindings.wtf",
@@ -1137,9 +2201,9 @@
         {
             "path": "Data/patch-4.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/patch-4.MPQ",
-            "size": 2560817816,
-            "md5": "828fe5d8408e07c7e45b40e733b679be",
-            "modified": 1779835366
+            "size": 2560810656,
+            "md5": "5b147f32d4efe28032575dcade8608e2",
+            "modified": 1784849232
         },
         {
             "path": "Data/patch-5.MPQ",
@@ -1207,9 +2271,9 @@
         {
             "path": "Data/patch-E.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/patch-E.MPQ",
-            "size": 4661638611,
-            "md5": "f3ebfd7d4e5f1420f86137bfb45d7758",
-            "modified": 1782525799
+            "size": 4579691126,
+            "md5": "6e582d67f9ec3c1bd4ebdeae5ff64d53",
+            "modified": 1784849349
         },
         {
             "path": "Data/patch-F.MPQ",
@@ -1254,18 +2318,11 @@
             "modified": 1783290282
         },
         {
-            "path": "Data/patch-V.MPQ",
-            "url": "https://azeroth-universe.eu/universe_client/Data/patch-V.MPQ",
-            "size": 64783320,
-            "md5": "275549917d7e3470694bcd0c7ba8636f",
-            "modified": 1783945504
-        },
-        {
             "path": "Data/patch-Y.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/patch-Y.MPQ",
-            "size": 5720763545,
-            "md5": "07cd533c5cc2fa0ffcd362acd3bd9762",
-            "modified": 1783879908
+            "size": 5720724225,
+            "md5": "ada8f89f8f6b7a5303340e7d5a445e18",
+            "modified": 1784849431
         },
         {
             "path": "Data/patch-Z.MPQ",
@@ -1273,76 +2330,6 @@
             "size": 1726771640,
             "md5": "85f90e1f4808c994c570800f014d73c5",
             "modified": 1783290193
-        },
-        {
-            "path": "Data/patch-ZA.MPQ",
-            "url": "https://azeroth-universe.eu/universe_client/Data/patch-ZA.MPQ",
-            "size": 18126945,
-            "md5": "7b46e99cc241fd7404ea2f5c2c6e19c2",
-            "modified": 1783968367
-        },
-        {
-            "path": "Data/patch-ZB.MPQ",
-            "url": "https://azeroth-universe.eu/universe_client/Data/patch-ZB.MPQ",
-            "size": 4871408,
-            "md5": "37c6b6ab07338121458435a9e77727d2",
-            "modified": 1783815404
-        },
-        {
-            "path": "Data/patch-ZC.MPQ",
-            "url": "https://azeroth-universe.eu/universe_client/Data/patch-ZC.MPQ",
-            "size": 8785703,
-            "md5": "7585dea645c73ae0afe235badac05119",
-            "modified": 1783860388
-        },
-        {
-            "path": "Data/patch-ZD.MPQ",
-            "url": "https://azeroth-universe.eu/universe_client/Data/patch-ZD.MPQ",
-            "size": 10065949,
-            "md5": "bfecbb52c43b909934f7d639dd9f821d",
-            "modified": 1783956962
-        },
-        {
-            "path": "Data/patch-ZE.MPQ",
-            "url": "https://azeroth-universe.eu/universe_client/Data/patch-ZE.MPQ",
-            "size": 20867760,
-            "md5": "65fcd49a66b341ed8852362b1701780c",
-            "modified": 1783996079
-        },
-        {
-            "path": "Data/patch-ZF.MPQ",
-            "url": "https://azeroth-universe.eu/universe_client/Data/patch-ZF.MPQ",
-            "size": 7094170,
-            "md5": "427242e4b90614cfbfdfbaf68c6fac00",
-            "modified": 1784278814
-        },
-        {
-            "path": "Data/patch-ZG.MPQ",
-            "url": "https://azeroth-universe.eu/universe_client/Data/patch-ZG.MPQ",
-            "size": 95242,
-            "md5": "dce4dabbfa465f0b9b2a13b651d943d5",
-            "modified": 1784278829
-        },
-        {
-            "path": "Data/patch-ZH.MPQ",
-            "url": "https://azeroth-universe.eu/universe_client/Data/patch-ZH.MPQ",
-            "size": 712650,
-            "md5": "e2ecbb5404f219ca89a80f274b0f0987",
-            "modified": 1784310164
-        },
-        {
-            "path": "Data/patch-ZI.MPQ",
-            "url": "https://azeroth-universe.eu/universe_client/Data/patch-ZI.MPQ",
-            "size": 2540764,
-            "md5": "1efa46444cc6cb511cbe75d7a2b9d193",
-            "modified": 1784278862
-        },
-        {
-            "path": "Data/patch-ZJ.MPQ",
-            "url": "https://azeroth-universe.eu/universe_client/Data/patch-ZJ.MPQ",
-            "size": 17327248,
-            "md5": "d224e88ab4e7878e9c4293adc1a317ba",
-            "modified": 1784515363
         },
         {
             "path": "Data/patch.MPQ",
