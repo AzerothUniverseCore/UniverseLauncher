@@ -59,6 +59,12 @@
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,4,6,0">
+                    <!-- Sélecteur de langue FR / EN -->
+                    <Button x:Name="LangFrButton" Content="FR" Style="{StaticResource TitleBarButtonStyle}"
+                            FontFamily="Segoe UI Semibold" FontSize="10.5" Click="LangFr_Click"/>
+                    <Button x:Name="LangEnButton" Content="EN" Style="{StaticResource TitleBarButtonStyle}"
+                            FontFamily="Segoe UI Semibold" FontSize="10.5" Margin="0,0,10,0" Click="LangEn_Click"/>
+
                     <Button Content="&#xE921;" Style="{StaticResource TitleBarButtonStyle}" FontFamily="Segoe MDL2 Assets" Click="Minimize_Click"/>
                     <Button Content="&#xE8BB;" Style="{StaticResource TitleBarButtonStyle}" FontFamily="Segoe MDL2 Assets" Click="Close_Click"/>
                 </StackPanel>
@@ -114,7 +120,7 @@
                     <!-- Actualités -->
                     <Border Grid.Column="0" Style="{StaticResource PanelBorderStyle}">
                         <DockPanel>
-                            <TextBlock DockPanel.Dock="Top" Text="ACTUALITÉS" Style="{StaticResource SectionHeaderStyle}" Margin="0,0,0,12"/>
+                            <TextBlock x:Name="NewsHeaderText" DockPanel.Dock="Top" Text="ACTUALITÉS" Style="{StaticResource SectionHeaderStyle}" Margin="0,0,0,12"/>
                             <ScrollViewer VerticalScrollBarVisibility="Auto">
                                 <ItemsControl x:Name="NewsItemsControl">
                                     <ItemsControl.ItemTemplate>
@@ -159,7 +165,7 @@
 
                         <Border Grid.Row="0" Style="{StaticResource PanelBorderStyle}">
                             <StackPanel>
-                                <TextBlock Text="DOSSIER CLIENT" Style="{StaticResource SectionHeaderStyle}" Margin="0,0,0,10"/>
+                                <TextBlock x:Name="ClientFolderHeaderText" Text="DOSSIER CLIENT" Style="{StaticResource SectionHeaderStyle}" Margin="0,0,0,10"/>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
@@ -181,7 +187,7 @@
 
                         <Border Grid.Row="2" Style="{StaticResource PanelBorderStyle}">
                             <DockPanel>
-                                <TextBlock DockPanel.Dock="Top" Text="JOURNAL" Style="{StaticResource SectionHeaderStyle}" Margin="0,0,0,10"/>
+                                <TextBlock x:Name="JournalHeaderText" DockPanel.Dock="Top" Text="JOURNAL" Style="{StaticResource SectionHeaderStyle}" Margin="0,0,0,10"/>
                                 <ScrollViewer x:Name="JournalScrollViewer" VerticalScrollBarVisibility="Auto">
                                     <ItemsControl x:Name="JournalItemsControl">
                                         <ItemsControl.ItemTemplate>
@@ -216,9 +222,9 @@
                     </StackPanel>
 
                     <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
-                        <Button Content="SITE WEB" Style="{StaticResource GoldOutlineButtonStyle}" Margin="0,0,8,0" Click="Website_Click"/>
-                        <Button Content="S'INSCRIRE" Style="{StaticResource GoldOutlineButtonStyle}" Margin="0,0,8,0" Click="Register_Click"/>
-                        <Button Content="VÉRIFIER" Style="{StaticResource GoldOutlineButtonStyle}" Margin="0,0,8,0" Click="Verify_Click"/>
+                        <Button x:Name="WebsiteButton" Content="SITE WEB" Style="{StaticResource GoldOutlineButtonStyle}" Margin="0,0,8,0" Click="Website_Click"/>
+                        <Button x:Name="RegisterButton" Content="S'INSCRIRE" Style="{StaticResource GoldOutlineButtonStyle}" Margin="0,0,8,0" Click="Register_Click"/>
+                        <Button x:Name="VerifyButton" Content="VÉRIFIER" Style="{StaticResource GoldOutlineButtonStyle}" Margin="0,0,8,0" Click="Verify_Click"/>
                         <Button x:Name="ActionButton" Content="JOUER" Style="{StaticResource PrimaryButtonStyle}" Click="ActionButton_Click"/>
                     </StackPanel>
                 </Grid>

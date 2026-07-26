@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
+using AzerothUniverseLauncher.Localization;
 using AzerothUniverseLauncher.Models;
 using AzerothUniverseLauncher.Services;
 using WinFormsFolderDialog = System.Windows.Forms.FolderBrowserDialog;
@@ -22,10 +23,30 @@ public partial class MainWindow : Window
     private LauncherSettings _settings = new();
     private List<ManifestFile> _pendingFiles = new();
     private string _manifestUrl = "";
+    private string _registerUrl = "https://azeroth-universe.eu/fr/register";
     private ActionMode _mode = ActionMode.CheckFolder;
+
+    /// <summary>
+    /// Dernier mode "actionnable" (hors Busy). Utilisé pour que le bouton d'action
+    /// garde un libellé cohérent (et traduit) pendant qu'il est désactivé (Busy),
+    /// au lieu de rester figé sur l'ancien texte.
+    /// </summary>
+    private ActionMode _lastActionableMode = ActionMode.CheckFolder;
+
     private CancellationTokenSource? _busyCts;
 
+    // Statut de téléchargement/vérification affiché en bas à gauche : on garde la
+    // clé + les arguments (pas juste le texte déjà rendu) pour pouvoir le re-générer
+    // dans la nouvelle langue si l'utilisateur bascule FR/EN en cours d'opération.
+    private string _statusKey = "status_ready";
+    private object?[] _statusArgs = Array.Empty<object?>();
+
+    // Journal : on garde chaque ligne sous forme (horodatage, clé + arguments) pour
+    // pouvoir reconstruire tout l'affichage dans la nouvelle langue au moment du
+    // changement de langue, sans perdre l'historique.
+    private readonly List<(DateTime Timestamp, LogEntry Entry)> _journalRecords = new();
     private readonly ObservableCollection<string> _journalEntries = new();
+
     private readonly DispatcherTimer _statusTimer;
 
     public MainWindow()
@@ -36,7 +57,6 @@ public partial class MainWindow : Window
 
         TitleBarVersionText.Text = "build " + Config.LauncherVersion;
         HeaderTitleText.Text = Config.LauncherTitle;
-        HeaderTaglineText.Text = Config.LauncherTagline;
 
         _statusTimer = new DispatcherTimer
         {
@@ -54,9 +74,12 @@ public partial class MainWindow : Window
 
     private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
     {
+        _settings = _settingsService.Load();
+        Strings.SetLanguage(_settings.Language);
+        ApplyLanguage();
+
         LoadBackgroundImage();
 
-        _settings = _settingsService.Load();
         DeepVerifyCheckBox.IsChecked = _settings.DeepVerify;
 
         if (!string.IsNullOrWhiteSpace(_settings.ClientFolder))
@@ -64,7 +87,7 @@ public partial class MainWindow : Window
             ClientFolderTextBox.Text = _settings.ClientFolder;
         }
 
-        Log("Connexion au serveur...");
+        Log("log_connecting_server");
         await RefreshNewsAndStatusAsync();
         _statusTimer.Start();
 
@@ -75,7 +98,7 @@ public partial class MainWindow : Window
         else
         {
             SetMode(ActionMode.CheckFolder);
-            DownloadStatusText.Text = "Sélectionnez votre dossier client pour commencer.";
+            SetStatus("status_select_folder");
         }
     }
 
@@ -101,24 +124,28 @@ public partial class MainWindow : Window
                 bitmap.EndInit();
                 bitmap.Freeze();
                 BackgroundImage.Source = bitmap;
-                Log($"Fond d'écran chargé : {path}");
+                Log("log_background_loaded_fmt", path);
                 return;
             }
             catch (Exception ex)
             {
-                Log($"Fond d'écran trouvé mais illisible ({name}) : {ex.Message}");
+                Log("log_background_unreadable_fmt", name, ex.Message);
             }
         }
 
-        Log($"Aucun fond d'écran trouvé dans {assetsDir} (background.jpg/.png/.webp) — fond dégradé par défaut utilisé.");
+        Log("log_background_missing_fmt", assetsDir);
     }
 
     private async Task RefreshNewsAndStatusAsync()
     {
         try
         {
-            var news = await _api.GetNewsAsync();
+            var news = await _api.GetNewsAsync(Strings.CurrentLanguage);
             _manifestUrl = news.VersionInfo.ManifestUrl;
+            if (!string.IsNullOrWhiteSpace(news.VersionInfo.RegisterUrl))
+            {
+                _registerUrl = news.VersionInfo.RegisterUrl;
+            }
 
             NewsItemsControl.ItemsSource = news.News
                 .Select(NewsDisplayItem.FromNewsItem)
@@ -126,8 +153,8 @@ public partial class MainWindow : Window
 
             bool online = news.VersionInfo.ServerStatus.Equals("online", StringComparison.OrdinalIgnoreCase);
 
-            StatusLabelText.Text = online ? "Serveur en ligne" : "Serveur hors ligne";
-            OnlinePlayersText.Text = online ? $"{news.VersionInfo.OnlinePlayers} joueur(s) connecté(s)" : " ";
+            StatusLabelText.Text = online ? Strings.T("status_online") : Strings.T("status_offline");
+            OnlinePlayersText.Text = online ? Strings.F("online_players_fmt", news.VersionInfo.OnlinePlayers) : " ";
 
             // Couleur du point : vert si en ligne, rouge si hors ligne.
             StatusDot.Fill = new System.Windows.Media.SolidColorBrush(online
@@ -136,11 +163,66 @@ public partial class MainWindow : Window
         }
         catch (Exception ex)
         {
-            Log("Impossible de contacter le serveur : " + ex.Message);
-            StatusLabelText.Text = "Serveur injoignable";
+            Log("log_server_unreachable_fmt", ex.Message);
+            StatusLabelText.Text = Strings.T("status_unreachable");
             OnlinePlayersText.Text = " ";
             StatusDot.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(0xD9, 0x4A, 0x4A));
         }
+    }
+
+    // =====================================================================
+    // LANGUE (FR / EN)
+    // =====================================================================
+
+    private async void LangFr_Click(object sender, RoutedEventArgs e) => await SetLanguageAsync(Strings.French);
+
+    private async void LangEn_Click(object sender, RoutedEventArgs e) => await SetLanguageAsync(Strings.English);
+
+    private async Task SetLanguageAsync(string languageCode)
+    {
+        if (Strings.CurrentLanguage == languageCode) return;
+
+        Strings.SetLanguage(languageCode);
+        _settings.Language = languageCode;
+        _settingsService.Save(_settings);
+
+        ApplyLanguage();
+
+        // Les actualités et le libellé "en ligne"/"hors ligne" viennent du serveur :
+        // on les redemande immédiatement dans la nouvelle langue.
+        await RefreshNewsAndStatusAsync();
+    }
+
+    /// <summary>
+    /// Met à jour tous les libellés de l'interface dans la langue courante : textes
+    /// statiques, libellé du bouton d'action, statut de téléchargement en cours et
+    /// historique complet du journal (chaque ligne est re-générée depuis sa clé de
+    /// traduction d'origine, rien n'est perdu ni figé dans l'ancienne langue).
+    /// </summary>
+    private void ApplyLanguage()
+    {
+        HeaderTaglineText.Text = Strings.T("tagline");
+        NewsHeaderText.Text = Strings.T("news_header");
+        ClientFolderHeaderText.Text = Strings.T("client_folder_header");
+        JournalHeaderText.Text = Strings.T("journal_header");
+        DeepVerifyCheckBox.Content = Strings.T("deep_verify_label");
+        WebsiteButton.Content = Strings.T("btn_website");
+        RegisterButton.Content = Strings.T("btn_register");
+        VerifyButton.Content = Strings.T("btn_verify");
+
+        if (string.IsNullOrWhiteSpace(_settings.ClientFolder))
+        {
+            ClientFolderTextBox.Text = Strings.T("client_folder_placeholder");
+        }
+
+        SetMode(_mode); // rafraîchit le texte du bouton d'action dans la nouvelle langue
+        RefreshStatusText(); // rafraîchit le statut en cours (bas de fenêtre)
+        RebuildJournalDisplay(); // retraduit tout l'historique du journal
+
+        var activeBrush = (System.Windows.Media.Brush)FindResource("BrushGoldBright");
+        var inactiveBrush = (System.Windows.Media.Brush)FindResource("BrushTextSecondary");
+        LangFrButton.Foreground = Strings.CurrentLanguage == Strings.French ? activeBrush : inactiveBrush;
+        LangEnButton.Foreground = Strings.CurrentLanguage == Strings.English ? activeBrush : inactiveBrush;
     }
 
     // =====================================================================
@@ -151,7 +233,7 @@ public partial class MainWindow : Window
     {
         using var dialog = new WinFormsFolderDialog
         {
-            Description = "Choisissez le dossier d'installation du client Azeroth Universe",
+            Description = Strings.T("folder_dialog_description"),
             UseDescriptionForTitle = true
         };
 
@@ -165,7 +247,7 @@ public partial class MainWindow : Window
         ClientFolderTextBox.Text = dialog.SelectedPath;
         _settingsService.Save(_settings);
 
-        Log("Dossier client défini : " + dialog.SelectedPath);
+        Log("log_client_folder_set_fmt", dialog.SelectedPath);
         await RunCheckAsync();
     }
 
@@ -190,30 +272,30 @@ public partial class MainWindow : Window
         if (string.IsNullOrWhiteSpace(_settings.ClientFolder)) return;
 
         SetMode(ActionMode.Busy);
-        DownloadStatusText.Text = "Vérification des fichiers...";
+        SetStatus("status_checking_files");
         DownloadProgressBar.IsIndeterminate = true;
-        Log("Récupération du manifest distant...");
+        Log("log_fetching_manifest");
 
         try
         {
             if (string.IsNullOrWhiteSpace(_manifestUrl))
             {
-                var news = await _api.GetNewsAsync();
+                var news = await _api.GetNewsAsync(Strings.CurrentLanguage);
                 _manifestUrl = news.VersionInfo.ManifestUrl;
             }
 
             var manifest = await _api.GetManifestAsync(_manifestUrl);
             if (!manifest.Success)
             {
-                Log("Erreur manifest : " + manifest.Error);
-                DownloadStatusText.Text = "Erreur lors de la récupération du manifest.";
+                Log("log_manifest_error_fmt", manifest.Error);
+                SetStatus("status_manifest_error");
                 SetMode(ActionMode.CheckFolder);
                 return;
             }
 
             Directory.CreateDirectory(_settings.ClientFolder);
 
-            var progressLog = new Progress<string>(Log);
+            var progressLog = new Progress<LogEntry>(entry => Log(entry.Key, entry.Args));
             var result = await _updater.CheckAsync(
                 _settings.ClientFolder, manifest.Files, _settings.DeepVerify, progressLog, CancellationToken.None);
 
@@ -223,22 +305,24 @@ public partial class MainWindow : Window
 
             if (_pendingFiles.Count == 0)
             {
-                DownloadStatusText.Text = "Le client est à jour.";
-                Log("Aucune mise à jour nécessaire.");
+                SetStatus("status_client_up_to_date");
+                Log("log_no_update_needed");
                 SetMode(ActionMode.Play);
             }
             else
             {
-                DownloadStatusText.Text =
-                    $"{_pendingFiles.Count} fichier(s) à télécharger ({UpdateService.FormatSize(result.TotalBytesToDownload)})";
-                Log($"{_pendingFiles.Count} fichier(s) manquant(s) ou obsolète(s).");
+                SetStatus(
+                    "status_files_to_download_fmt",
+                    _pendingFiles.Count,
+                    UpdateService.FormatSize(result.TotalBytesToDownload));
+                Log("log_files_missing_fmt", _pendingFiles.Count);
                 SetMode(ActionMode.Update);
             }
         }
         catch (Exception ex)
         {
-            Log("Erreur pendant la vérification : " + ex.Message);
-            DownloadStatusText.Text = "Erreur pendant la vérification.";
+            Log("log_verify_error_fmt", ex.Message);
+            SetStatus("status_verify_error");
             DownloadProgressBar.IsIndeterminate = false;
             SetMode(ActionMode.CheckFolder);
         }
@@ -272,7 +356,7 @@ public partial class MainWindow : Window
 
         SetMode(ActionMode.Busy);
         _busyCts = new CancellationTokenSource();
-        Log($"Démarrage du téléchargement de {_pendingFiles.Count} fichier(s)...");
+        Log("log_download_start_fmt", _pendingFiles.Count);
 
         var stopwatch = Stopwatch.StartNew();
 
@@ -284,7 +368,7 @@ public partial class MainWindow : Window
             var speedBytesPerSecond = elapsedSeconds > 0.5 ? info.DownloadedBytes / elapsedSeconds : 0;
 
             var speedText = speedBytesPerSecond > 0
-                ? $" — {UpdateService.FormatSize((long)speedBytesPerSecond)}/s"
+                ? Strings.F("speed_suffix_fmt", UpdateService.FormatSize((long)speedBytesPerSecond))
                 : "";
 
             var etaText = "";
@@ -292,34 +376,39 @@ public partial class MainWindow : Window
             {
                 var remainingBytes = info.TotalBytes - info.DownloadedBytes;
                 var etaSeconds = remainingBytes / speedBytesPerSecond;
-                etaText = $" — restant : {FormatDuration(etaSeconds)}";
+                etaText = Strings.F("eta_remaining_fmt", FormatDuration(etaSeconds));
             }
 
-            DownloadStatusText.Text =
-                $"Téléchargement {info.FilesCompleted}/{info.FilesTotal} — " +
-                $"{UpdateService.FormatSize(info.DownloadedBytes)} / {UpdateService.FormatSize(info.TotalBytes)} " +
-                $"({info.Percent:0.#}%){speedText}{etaText}";
+            SetStatus(
+                "status_download_progress_fmt",
+                info.FilesCompleted,
+                info.FilesTotal,
+                UpdateService.FormatSize(info.DownloadedBytes),
+                UpdateService.FormatSize(info.TotalBytes),
+                $"{info.Percent:0.#}",
+                speedText,
+                etaText);
         });
 
-        var progressLog = new Progress<string>(Log);
+        var progressLog = new Progress<LogEntry>(entry => Log(entry.Key, entry.Args));
 
         try
         {
             await _updater.DownloadAllAsync(_settings.ClientFolder, _pendingFiles, progress, progressLog, _busyCts.Token);
-            Log("Téléchargement terminé avec succès.");
-            DownloadStatusText.Text = "Téléchargement terminé.";
+            Log("log_download_success");
+            SetStatus("status_download_done");
             await RunCheckAsync();
         }
         catch (OperationCanceledException)
         {
-            Log("Téléchargement annulé.");
-            DownloadStatusText.Text = "Téléchargement annulé.";
+            Log("log_download_canceled");
+            SetStatus("status_download_canceled");
             SetMode(ActionMode.Update);
         }
         catch (Exception ex)
         {
-            Log("Erreur pendant le téléchargement : " + ex.Message);
-            DownloadStatusText.Text = "Erreur pendant le téléchargement.";
+            Log("log_download_error_fmt", ex.Message);
+            SetStatus("status_download_error");
             SetMode(ActionMode.Update);
         }
     }
@@ -341,16 +430,16 @@ public partial class MainWindow : Window
 
         if (!File.Exists(exePath))
         {
-            Log("Exécutable introuvable : " + exePath);
+            Log("log_exe_not_found_fmt", exePath);
             System.Windows.MessageBox.Show(
-                $"Impossible de trouver {Config.ClientExecutableName} dans le dossier client.",
-                "Azeroth Universe Launcher", MessageBoxButton.OK, MessageBoxImage.Warning);
+                Strings.F("msg_exe_not_found_fmt", Config.ClientExecutableName),
+                Strings.T("app_box_title"), MessageBoxButton.OK, MessageBoxImage.Warning);
             return;
         }
 
         try
         {
-            Log("Lancement du client...");
+            Log("log_launching_client");
             Process.Start(new ProcessStartInfo(exePath)
             {
                 WorkingDirectory = _settings.ClientFolder,
@@ -359,10 +448,10 @@ public partial class MainWindow : Window
         }
         catch (Exception ex)
         {
-            Log("Impossible de lancer le client : " + ex.Message);
+            Log("log_launch_error_fmt", ex.Message);
             System.Windows.MessageBox.Show(
-                "Impossible de lancer le client :\n\n" + ex.Message,
-                "Azeroth Universe Launcher", MessageBoxButton.OK, MessageBoxImage.Error);
+                Strings.F("msg_launch_error_fmt", ex.Message),
+                Strings.T("app_box_title"), MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 
@@ -372,7 +461,7 @@ public partial class MainWindow : Window
 
     private void Website_Click(object sender, RoutedEventArgs e) => OpenUrl("https://azeroth-universe.eu/");
 
-    private void Register_Click(object sender, RoutedEventArgs e) => OpenUrl("https://azeroth-universe.eu/fr/register");
+    private void Register_Click(object sender, RoutedEventArgs e) => OpenUrl(_registerUrl);
 
     private static void OpenUrl(string url)
     {
@@ -408,44 +497,96 @@ public partial class MainWindow : Window
         if (!string.IsNullOrWhiteSpace(_settings.ClientFolder)) return true;
 
         System.Windows.MessageBox.Show(
-            "Merci de sélectionner d'abord votre dossier client (bouton \"...\").",
-            "Azeroth Universe Launcher", MessageBoxButton.OK, MessageBoxImage.Information);
+            Strings.T("msg_select_folder_first"),
+            Strings.T("app_box_title"), MessageBoxButton.OK, MessageBoxImage.Information);
         return false;
+    }
+
+    /// <summary>Définit le statut affiché en bas de fenêtre, en gardant la clé/les arguments
+    /// pour pouvoir le re-générer si la langue change pendant que ce statut est affiché.</summary>
+    private void SetStatus(string key, params object?[] args)
+    {
+        _statusKey = key;
+        _statusArgs = args;
+        DownloadStatusText.Text = args.Length == 0 ? Strings.T(key) : Strings.F(key, args);
+    }
+
+    private void RefreshStatusText()
+    {
+        DownloadStatusText.Text = _statusArgs.Length == 0 ? Strings.T(_statusKey) : Strings.F(_statusKey, _statusArgs);
     }
 
     private void SetMode(ActionMode mode)
     {
         _mode = mode;
+        if (mode != ActionMode.Busy)
+        {
+            _lastActionableMode = mode;
+        }
+
         switch (mode)
         {
             case ActionMode.CheckFolder:
-                ActionButton.Content = "VÉRIFIER";
+                ActionButton.Content = Strings.T("btn_verify");
                 ActionButton.IsEnabled = true;
                 break;
             case ActionMode.Update:
-                ActionButton.Content = "METTRE À JOUR";
+                ActionButton.Content = Strings.T("btn_update");
                 ActionButton.IsEnabled = true;
                 break;
             case ActionMode.Play:
-                ActionButton.Content = "JOUER";
+                ActionButton.Content = Strings.T("btn_play");
                 ActionButton.IsEnabled = true;
                 break;
             case ActionMode.Busy:
+                // Le bouton est désactivé, mais garde un libellé cohérent (et traduit)
+                // correspondant à la dernière action disponible, au lieu de figer
+                // l'ancien texte (ex. rester sur "VÉRIFIER" après un passage en anglais).
+                ActionButton.Content = GetActionLabel(_lastActionableMode);
                 ActionButton.IsEnabled = false;
                 break;
         }
     }
 
-    private void Log(string message)
+    private static string GetActionLabel(ActionMode mode) => mode switch
     {
+        ActionMode.Update => Strings.T("btn_update"),
+        ActionMode.Play => Strings.T("btn_play"),
+        _ => Strings.T("btn_verify")
+    };
+
+    /// <summary>Ajoute une ligne au journal à partir d'une clé de traduction (+ arguments),
+    /// pour que l'historique puisse être retraduit intégralement si la langue change.</summary>
+    private void Log(string key, params object?[] args)
+    {
+        var record = (DateTime.Now, new LogEntry(key, args));
+
         void Append()
         {
-            _journalEntries.Add($"[{DateTime.Now:HH:mm:ss}] {message}");
+            _journalRecords.Add(record);
+            if (_journalRecords.Count > 500) _journalRecords.RemoveAt(0);
+
+            _journalEntries.Add(FormatJournalLine(record));
             if (_journalEntries.Count > 500) _journalEntries.RemoveAt(0);
+
             JournalScrollViewer.ScrollToEnd();
         }
 
         if (Dispatcher.CheckAccess()) Append();
         else Dispatcher.Invoke(Append);
+    }
+
+    private static string FormatJournalLine((DateTime Timestamp, LogEntry Entry) record) =>
+        $"[{record.Timestamp:HH:mm:ss}] {record.Entry.Render()}";
+
+    /// <summary>Reconstruit tout l'affichage du journal dans la langue courante, à partir
+    /// de l'historique conservé (aucune ligne n'est perdue lors d'un changement de langue).</summary>
+    private void RebuildJournalDisplay()
+    {
+        _journalEntries.Clear();
+        foreach (var record in _journalRecords)
+        {
+            _journalEntries.Add(FormatJournalLine(record));
+        }
     }
 }

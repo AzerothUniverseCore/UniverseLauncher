@@ -1,4 +1,5 @@
 using System.Windows;
+using AzerothUniverseLauncher.Localization;
 
 namespace AzerothUniverseLauncher;
 
@@ -13,8 +14,8 @@ public partial class App : System.Windows.Application
         DispatcherUnhandledException += (_, args) =>
         {
             System.Windows.MessageBox.Show(
-                "Une erreur inattendue est survenue :\n\n" + args.Exception.Message,
-                "Azeroth Universe Launcher",
+                Strings.F("msg_unexpected_error_fmt", args.Exception.Message),
+                Strings.T("app_box_title"),
                 MessageBoxButton.OK,
                 MessageBoxImage.Error);
             args.Handled = true;

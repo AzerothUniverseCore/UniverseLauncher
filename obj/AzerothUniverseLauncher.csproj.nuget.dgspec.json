@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aurora\\Desktop\\AzerothUniverseLauncher\\AzerothUniverseLauncher.csproj": {}
+    "C:\\Servers\\Sources\\UniverseLauncher\\AzerothUniverseLauncher.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aurora\\Desktop\\AzerothUniverseLauncher\\AzerothUniverseLauncher.csproj": {
+    "C:\\Servers\\Sources\\UniverseLauncher\\AzerothUniverseLauncher.csproj": {
       "version": "3.3.9",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aurora\\Desktop\\AzerothUniverseLauncher\\AzerothUniverseLauncher.csproj",
+        "projectUniqueName": "C:\\Servers\\Sources\\UniverseLauncher\\AzerothUniverseLauncher.csproj",
         "projectName": "AzerothUniverseLauncher",
-        "projectPath": "C:\\Users\\Aurora\\Desktop\\AzerothUniverseLauncher\\AzerothUniverseLauncher.csproj",
+        "projectPath": "C:\\Servers\\Sources\\UniverseLauncher\\AzerothUniverseLauncher.csproj",
         "packagesPath": "C:\\Users\\Aurora\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aurora\\Desktop\\AzerothUniverseLauncher\\obj\\",
+        "outputPath": "C:\\Servers\\Sources\\UniverseLauncher\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aurora\\AppData\\Roaming\\NuGet\\NuGet.Config",

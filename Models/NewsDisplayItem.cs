@@ -1,3 +1,5 @@
+using AzerothUniverseLauncher.Localization;
+
 namespace AzerothUniverseLauncher.Models;
 
 /// <summary>Enveloppe une NewsItem avec des propriétés prêtes pour l'affichage XAML.</summary>
@@ -12,9 +14,9 @@ public class NewsDisplayItem
     {
         var label = item.Type?.ToLowerInvariant() switch
         {
-            "update" => "MAJ",
-            "event" => "ÉVÉNEMENT",
-            _ => "INFO"
+            "update" => Strings.T("news_type_update"),
+            "event" => Strings.T("news_type_event"),
+            _ => Strings.T("news_type_info")
         };
 
         return new NewsDisplayItem

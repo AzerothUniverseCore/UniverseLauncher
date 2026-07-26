@@ -1,6 +1,7 @@
 using System.IO;
 using System.Net.Http;
 using System.Security.Cryptography;
+using AzerothUniverseLauncher.Localization;
 using AzerothUniverseLauncher.Models;
 
 namespace AzerothUniverseLauncher.Services;
@@ -33,7 +34,7 @@ public class UpdateService
         string clientFolder,
         List<ManifestFile> manifestFiles,
         bool deepVerify,
-        IProgress<string>? log,
+        IProgress<LogEntry>? log,
         CancellationToken ct)
     {
         return Task.Run(() =>
@@ -72,7 +73,7 @@ public class UpdateService
                 if (needsDownload)
                 {
                     toDownload.Add(mf);
-                    log?.Report($"À télécharger : {mf.Path}");
+                    log?.Report(new LogEntry("log_to_download_fmt", new object?[] { mf.Path }));
                 }
             }
 
@@ -89,7 +90,7 @@ public class UpdateService
         string clientFolder,
         List<ManifestFile> files,
         IProgress<DownloadProgressInfo> progress,
-        IProgress<string>? log,
+        IProgress<LogEntry>? log,
         CancellationToken ct)
     {
         using var client = new HttpClient { Timeout = Timeout.InfiniteTimeSpan };
@@ -107,7 +108,7 @@ public class UpdateService
             await semaphore.WaitAsync(ct);
             try
             {
-                log?.Report($"Téléchargement : {file.Path} ({FormatSize(file.Size)})");
+                log?.Report(new LogEntry("log_downloading_fmt", new object?[] { file.Path, FormatSize(file.Size) }));
 
                 await DownloadFileAsync(client, clientFolder, file, bytesRead =>
                 {
@@ -129,11 +130,11 @@ public class UpdateService
                 }, ct);
 
                 lock (sync) { filesCompleted++; }
-                log?.Report($"Terminé : {file.Path}");
+                log?.Report(new LogEntry("log_file_done_fmt", new object?[] { file.Path }));
             }
             catch (Exception ex) when (ex is not OperationCanceledException)
             {
-                log?.Report($"ERREUR sur {file.Path} : {ex.Message}");
+                log?.Report(new LogEntry("log_file_error_fmt", new object?[] { file.Path, ex.Message }));
                 throw;
             }
             finally
@@ -195,7 +196,7 @@ public class UpdateService
 
     public static string FormatSize(long bytes)
     {
-        string[] units = { "o", "Ko", "Mo", "Go", "To" };
+        string[] units = Strings.SizeUnits;
         double size = bytes;
         int unit = 0;
         while (size >= 1024 && unit < units.Length - 1)

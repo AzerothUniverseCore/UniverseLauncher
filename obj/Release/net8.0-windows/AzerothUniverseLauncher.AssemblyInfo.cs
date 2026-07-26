@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Azeroth Universe")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("3.3.9.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.3.9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.3.9+14681ef4eed35c8436358963436d996095116cd1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Azeroth Universe Launcher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AzerothUniverseLauncher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("3.3.9.0")]

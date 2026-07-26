@@ -11,4 +11,7 @@ public class LauncherSettings
     /// est comparée (rapide, suffisant dans l'immense majorité des cas).
     /// </summary>
     public bool DeepVerify { get; set; } = false;
+
+    /// <summary>Langue de l'interface du launcher : "fr" (défaut) ou "en".</summary>
+    public string Language { get; set; } = "fr";
 }
