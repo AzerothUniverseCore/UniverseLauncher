@@ -49,3 +49,5 @@ C:\Servers\Sources\UniverseLauncher\obj\Release\net8.0-windows\refint\AzerothUni
 C:\Servers\Sources\UniverseLauncher\obj\Release\net8.0-windows\AzerothUniverseLauncher.pdb
 C:\Servers\Sources\UniverseLauncher\obj\Release\net8.0-windows\AzerothUniverseLauncher.genruntimeconfig.cache
 C:\Servers\Sources\UniverseLauncher\obj\Release\net8.0-windows\ref\AzerothUniverseLauncher.dll
+C:\Servers\Sources\UniverseLauncher\obj\Release\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Servers\Sources\UniverseLauncher\obj\Release\net8.0-windows\AzerothUniverseLauncher_MarkupCompile.lref

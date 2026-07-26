@@ -114,6 +114,17 @@ public static class Strings
         ["log_downloading_fmt"] = "Téléchargement : {0} ({1})",
         ["log_file_done_fmt"] = "Terminé : {0}",
         ["log_file_error_fmt"] = "ERREUR sur {0} : {1}",
+
+        ["btn_pause"] = "PAUSE",
+        ["btn_resume"] = "REPRENDRE",
+        ["status_download_paused"] = "Téléchargement en pause.",
+        ["log_download_paused"] = "Téléchargement mis en pause.",
+        ["log_download_resumed"] = "Téléchargement repris.",
+
+        ["btn_repair"] = "RÉPARER",
+        ["log_repair_start_fmt"] = "Réparation de {0}...",
+        ["log_repair_success_fmt"] = "Réparation réussie : {0}",
+        ["log_repair_failed_fmt"] = "Échec de la réparation de {0} : {1}",
     };
 
     private static readonly Dictionary<string, string> En = new()
@@ -192,6 +203,17 @@ public static class Strings
         ["log_downloading_fmt"] = "Downloading: {0} ({1})",
         ["log_file_done_fmt"] = "Done: {0}",
         ["log_file_error_fmt"] = "ERROR on {0}: {1}",
+
+        ["btn_pause"] = "PAUSE",
+        ["btn_resume"] = "RESUME",
+        ["status_download_paused"] = "Download paused.",
+        ["log_download_paused"] = "Download paused.",
+        ["log_download_resumed"] = "Download resumed.",
+
+        ["btn_repair"] = "REPAIR",
+        ["log_repair_start_fmt"] = "Repairing {0}...",
+        ["log_repair_success_fmt"] = "Repair successful: {0}",
+        ["log_repair_failed_fmt"] = "Failed to repair {0}: {1}",
     };
 }
 

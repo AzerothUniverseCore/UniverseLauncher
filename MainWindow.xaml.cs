@@ -12,9 +12,25 @@ using WinFormsFolderDialog = System.Windows.Forms.FolderBrowserDialog;
 
 namespace AzerothUniverseLauncher;
 
+/// <summary>Une ligne affichée dans le journal, prête pour le binding XAML.</summary>
+public class JournalLine
+{
+    public string Text { get; init; } = "";
+
+    /// <summary>Fichier à re-télécharger si cette ligne propose une réparation (null sinon).</summary>
+    public ManifestFile? RepairTarget { get; init; }
+
+    public bool CanRepair => RepairTarget != null;
+
+    public string RepairButtonLabel { get; init; } = "";
+}
+
 public partial class MainWindow : Window
 {
     private enum ActionMode { CheckFolder, Update, Play, Busy }
+
+    /// <summary>Enregistrement brut d'une ligne de journal (horodatage + clé de traduction + cible de réparation éventuelle).</summary>
+    private sealed record JournalRecord(DateTime Timestamp, LogEntry Entry, ManifestFile? RepairTarget);
 
     private readonly ApiService _api = new();
     private readonly UpdateService _updater = new();
@@ -34,6 +50,7 @@ public partial class MainWindow : Window
     private ActionMode _lastActionableMode = ActionMode.CheckFolder;
 
     private CancellationTokenSource? _busyCts;
+    private PauseTokenSource _pauseTokenSource = new();
 
     // Statut de téléchargement/vérification affiché en bas à gauche : on garde la
     // clé + les arguments (pas juste le texte déjà rendu) pour pouvoir le re-générer
@@ -41,11 +58,11 @@ public partial class MainWindow : Window
     private string _statusKey = "status_ready";
     private object?[] _statusArgs = Array.Empty<object?>();
 
-    // Journal : on garde chaque ligne sous forme (horodatage, clé + arguments) pour
-    // pouvoir reconstruire tout l'affichage dans la nouvelle langue au moment du
-    // changement de langue, sans perdre l'historique.
-    private readonly List<(DateTime Timestamp, LogEntry Entry)> _journalRecords = new();
-    private readonly ObservableCollection<string> _journalEntries = new();
+    // Journal : on garde chaque ligne sous forme (horodatage, clé + arguments, cible de
+    // réparation) pour pouvoir reconstruire tout l'affichage dans la nouvelle langue au
+    // moment du changement de langue, sans perdre l'historique ni les boutons "Réparer".
+    private readonly List<JournalRecord> _journalRecords = new();
+    private readonly ObservableCollection<JournalLine> _journalEntries = new();
 
     private readonly DispatcherTimer _statusTimer;
 
@@ -195,9 +212,10 @@ public partial class MainWindow : Window
 
     /// <summary>
     /// Met à jour tous les libellés de l'interface dans la langue courante : textes
-    /// statiques, libellé du bouton d'action, statut de téléchargement en cours et
-    /// historique complet du journal (chaque ligne est re-générée depuis sa clé de
-    /// traduction d'origine, rien n'est perdu ni figé dans l'ancienne langue).
+    /// statiques, libellé du bouton d'action (et du bouton pause s'il est visible),
+    /// statut de téléchargement en cours et historique complet du journal (chaque
+    /// ligne, y compris les boutons "Réparer", est re-générée depuis sa clé de
+    /// traduction d'origine).
     /// </summary>
     private void ApplyLanguage()
     {
@@ -217,7 +235,12 @@ public partial class MainWindow : Window
 
         SetMode(_mode); // rafraîchit le texte du bouton d'action dans la nouvelle langue
         RefreshStatusText(); // rafraîchit le statut en cours (bas de fenêtre)
-        RebuildJournalDisplay(); // retraduit tout l'historique du journal
+        RebuildJournalDisplay(); // retraduit tout l'historique du journal (+ boutons Réparer)
+
+        if (PauseButton.Visibility == Visibility.Visible)
+        {
+            PauseButton.Content = _pauseTokenSource.IsPaused ? Strings.T("btn_resume") : Strings.T("btn_pause");
+        }
 
         var activeBrush = (System.Windows.Media.Brush)FindResource("BrushGoldBright");
         var inactiveBrush = (System.Windows.Media.Brush)FindResource("BrushTextSecondary");
@@ -295,7 +318,7 @@ public partial class MainWindow : Window
 
             Directory.CreateDirectory(_settings.ClientFolder);
 
-            var progressLog = new Progress<LogEntry>(entry => Log(entry.Key, entry.Args));
+            var progressLog = new Progress<ServiceLogEntry>(HandleServiceLog);
             var result = await _updater.CheckAsync(
                 _settings.ClientFolder, manifest.Files, _settings.DeepVerify, progressLog, CancellationToken.None);
 
@@ -356,6 +379,10 @@ public partial class MainWindow : Window
 
         SetMode(ActionMode.Busy);
         _busyCts = new CancellationTokenSource();
+        _pauseTokenSource = new PauseTokenSource();
+        PauseButton.Content = Strings.T("btn_pause");
+        PauseButton.Visibility = Visibility.Visible;
+
         Log("log_download_start_fmt", _pendingFiles.Count);
 
         var stopwatch = Stopwatch.StartNew();
@@ -390,11 +417,12 @@ public partial class MainWindow : Window
                 etaText);
         });
 
-        var progressLog = new Progress<LogEntry>(entry => Log(entry.Key, entry.Args));
+        var progressLog = new Progress<ServiceLogEntry>(HandleServiceLog);
 
         try
         {
-            await _updater.DownloadAllAsync(_settings.ClientFolder, _pendingFiles, progress, progressLog, _busyCts.Token);
+            await _updater.DownloadAllAsync(
+                _settings.ClientFolder, _pendingFiles, progress, progressLog, _pauseTokenSource.Token, _busyCts.Token);
             Log("log_download_success");
             SetStatus("status_download_done");
             await RunCheckAsync();
@@ -410,6 +438,29 @@ public partial class MainWindow : Window
             Log("log_download_error_fmt", ex.Message);
             SetStatus("status_download_error");
             SetMode(ActionMode.Update);
+        }
+        finally
+        {
+            PauseButton.Visibility = Visibility.Collapsed;
+        }
+    }
+
+    /// <summary>Bascule pause/reprise du téléchargement en cours.</summary>
+    private void PauseButton_Click(object sender, RoutedEventArgs e)
+    {
+        _pauseTokenSource.IsPaused = !_pauseTokenSource.IsPaused;
+
+        if (_pauseTokenSource.IsPaused)
+        {
+            PauseButton.Content = Strings.T("btn_resume");
+            Log("log_download_paused");
+            SetStatus("status_download_paused");
+        }
+        else
+        {
+            PauseButton.Content = Strings.T("btn_pause");
+            Log("log_download_resumed");
+            // Le prochain rapport de progression rétablira automatiquement un statut à jour.
         }
     }
 
@@ -452,6 +503,34 @@ public partial class MainWindow : Window
             System.Windows.MessageBox.Show(
                 Strings.F("msg_launch_error_fmt", ex.Message),
                 Strings.T("app_box_title"), MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+    }
+
+    // =====================================================================
+    // RÉPARATION D'UN FICHIER UNIQUE (depuis une ligne de journal en erreur)
+    // =====================================================================
+
+    private async void RepairFile_Click(object sender, RoutedEventArgs e)
+    {
+        if (sender is not FrameworkElement { DataContext: JournalLine { RepairTarget: { } file } } button)
+            return;
+
+        button.IsEnabled = false;
+        try
+        {
+            var progressLog = new Progress<ServiceLogEntry>(HandleServiceLog);
+            var success = await _updater.RepairFileAsync(_settings.ClientFolder, file, progressLog, CancellationToken.None);
+
+            if (success)
+            {
+                // Un seul fichier corrigé peut suffire à débloquer la mise à jour :
+                // on relance une vérification complète pour rafraîchir l'état.
+                await RunCheckAsync();
+            }
+        }
+        finally
+        {
+            button.IsEnabled = true;
         }
     }
 
@@ -555,18 +634,23 @@ public partial class MainWindow : Window
         _ => Strings.T("btn_verify")
     };
 
+    /// <summary>Relaie un message de journal renvoyé par UpdateService (avec sa cible de réparation éventuelle).</summary>
+    private void HandleServiceLog(ServiceLogEntry entry) => Log(entry.Entry.Key, entry.RepairTarget, entry.Entry.Args);
+
     /// <summary>Ajoute une ligne au journal à partir d'une clé de traduction (+ arguments),
     /// pour que l'historique puisse être retraduit intégralement si la langue change.</summary>
-    private void Log(string key, params object?[] args)
+    private void Log(string key, params object?[] args) => Log(key, null, args);
+
+    private void Log(string key, ManifestFile? repairTarget, object?[] args)
     {
-        var record = (DateTime.Now, new LogEntry(key, args));
+        var record = new JournalRecord(DateTime.Now, new LogEntry(key, args), repairTarget);
 
         void Append()
         {
             _journalRecords.Add(record);
             if (_journalRecords.Count > 500) _journalRecords.RemoveAt(0);
 
-            _journalEntries.Add(FormatJournalLine(record));
+            _journalEntries.Add(BuildJournalLine(record));
             if (_journalEntries.Count > 500) _journalEntries.RemoveAt(0);
 
             JournalScrollViewer.ScrollToEnd();
@@ -576,17 +660,21 @@ public partial class MainWindow : Window
         else Dispatcher.Invoke(Append);
     }
 
-    private static string FormatJournalLine((DateTime Timestamp, LogEntry Entry) record) =>
-        $"[{record.Timestamp:HH:mm:ss}] {record.Entry.Render()}";
+    private static JournalLine BuildJournalLine(JournalRecord record) => new()
+    {
+        Text = $"[{record.Timestamp:HH:mm:ss}] {record.Entry.Render()}",
+        RepairTarget = record.RepairTarget,
+        RepairButtonLabel = record.RepairTarget != null ? Strings.T("btn_repair") : ""
+    };
 
     /// <summary>Reconstruit tout l'affichage du journal dans la langue courante, à partir
-    /// de l'historique conservé (aucune ligne n'est perdue lors d'un changement de langue).</summary>
+    /// de l'historique conservé (aucune ligne ni bouton "Réparer" n'est perdu au changement de langue).</summary>
     private void RebuildJournalDisplay()
     {
         _journalEntries.Clear();
         foreach (var record in _journalRecords)
         {
-            _journalEntries.Add(FormatJournalLine(record));
+            _journalEntries.Add(BuildJournalLine(record));
         }
     }
 }
