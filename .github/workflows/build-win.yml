@@ -1,9 +1,10 @@
 name: Build Windows Launcher
 
 # Déclencheurs :
-# - push sur main -> build de vérification
-# - tag "v*.*.*" (ex. v3.3.9) -> build + création d'une Release GitHub avec le zip attaché
-# - pull request vers main -> build de vérification
+# - push sur main -> build + publication automatique dans la Release "latest-build"
+#   (remplace l'exe précédent, pas besoin d'aller le chercher dans le Summary)
+# - tag "v*.*.*" (ex. v3.3.9) -> build + Release GitHub versionnée dédiée
+# - pull request vers main -> build de vérification uniquement (pas de Release)
 # - déclenchement manuel depuis l'onglet Actions
 on:
   push:
@@ -69,10 +70,11 @@ jobs:
           if-no-files-found: error
 
   release:
-    name: Créer la Release GitHub
+    name: Publier dans une Release GitHub
     needs: build
-    # Ne s'exécute que lors d'un push de tag "v*.*.*" (ex. v3.3.9)
-    if: startsWith(github.ref, 'refs/tags/v')
+    # Jamais sur une pull request (pas de token d'écriture, et on ne veut pas
+    # publier une release depuis une branche non fusionnée).
+    if: github.event_name != 'pull_request'
     runs-on: windows-latest
     permissions:
       contents: write
@@ -83,14 +85,35 @@ jobs:
           name: AzerothUniverseLauncher-${{ env.RUNTIME_ID }}
           path: ${{ env.PUBLISH_DIR }}
 
+      - name: Déterminer le tag de la Release
+        id: tag
+        shell: pwsh
+        run: |
+          if ("${{ github.ref_type }}" -eq "tag") {
+            # Push d'un tag de version (ex. v3.3.9) -> Release officielle dédiée
+            echo "tag_name=${{ github.ref_name }}" >> $env:GITHUB_OUTPUT
+            echo "release_name=${{ github.ref_name }}" >> $env:GITHUB_OUTPUT
+            echo "prerelease=false" >> $env:GITHUB_OUTPUT
+          } else {
+            # Simple push sur main (ou déclenchement manuel) -> Release "dernier build"
+            # réutilisée et mise à jour à chaque exécution (mêmes tag/nom).
+            echo "tag_name=latest-build" >> $env:GITHUB_OUTPUT
+            echo "release_name=Dernier build (main)" >> $env:GITHUB_OUTPUT
+            echo "prerelease=true" >> $env:GITHUB_OUTPUT
+          }
+
       - name: Compresser le build
         shell: pwsh
         run: |
-          Compress-Archive -Path "${{ env.PUBLISH_DIR }}\*" -DestinationPath "AzerothUniverseLauncher-${{ github.ref_name }}-${{ env.RUNTIME_ID }}.zip"
+          Compress-Archive -Path "${{ env.PUBLISH_DIR }}\*" -DestinationPath "AzerothUniverseLauncher-${{ steps.tag.outputs.tag_name }}-${{ env.RUNTIME_ID }}.zip"
 
-      - name: Publier la Release
+      - name: Publier / mettre à jour la Release
         uses: softprops/action-gh-release@v2
         with:
-          files: AzerothUniverseLauncher-${{ github.ref_name }}-${{ env.RUNTIME_ID }}.zip
+          tag_name: ${{ steps.tag.outputs.tag_name }}
+          name: ${{ steps.tag.outputs.release_name }}
+          prerelease: ${{ steps.tag.outputs.prerelease }}
+          make_latest: ${{ steps.tag.outputs.tag_name != 'latest-build' }}
+          files: AzerothUniverseLauncher-${{ steps.tag.outputs.tag_name }}-${{ env.RUNTIME_ID }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
