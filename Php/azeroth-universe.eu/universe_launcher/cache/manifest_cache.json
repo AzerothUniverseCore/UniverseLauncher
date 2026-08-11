@@ -1,10 +1,10 @@
 {
     "success": true,
     "version": "3.3.5a",
-    "generated_at": "2026-08-10 22:58:13",
-    "total_files": 181,
-    "total_size": 74846967039,
-    "total_size_mb": 71379.63,
+    "generated_at": "2026-08-11 03:08:53",
+    "total_files": 321,
+    "total_size": 74863666714,
+    "total_size_mb": 71395.56,
     "base_url": "https://azeroth-universe.eu/universe_client/",
     "files": [
         {
@@ -1182,6 +1182,986 @@
             "size": 27,
             "md5": "3a611c7e48e1e7d98edc1bd6a72e09e3",
             "modified": 1673100864
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/config",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/config",
+            "size": 362,
+            "md5": "9fdecbbc5e580d2643e38e59b83d939a",
+            "modified": 1786403786
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/description",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/description",
+            "size": 73,
+            "md5": "a0a7c3fff21f2aea3cfa1d0316dd816c",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/HEAD",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/HEAD",
+            "size": 21,
+            "md5": "cf7dd3ce51958c5f13fece957cc417fb",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/applypatch-msg.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/applypatch-msg.sample",
+            "size": 478,
+            "md5": "ce562e08d8098926a3862fc6e7905199",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/commit-msg.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/commit-msg.sample",
+            "size": 896,
+            "md5": "579a3c1e12a1e74a98169175fb913012",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/fsmonitor-watchman.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/fsmonitor-watchman.sample",
+            "size": 4726,
+            "md5": "a0b2633a2c8e97501610bd3f73da66fc",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/post-update.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/post-update.sample",
+            "size": 189,
+            "md5": "2b7ea5cee3c49ff53d41e00785eb974c",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/pre-applypatch.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/pre-applypatch.sample",
+            "size": 424,
+            "md5": "054f9ffb8bfe04a599751cc757226dda",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/pre-commit.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/pre-commit.sample",
+            "size": 1649,
+            "md5": "5029bfab85b1c39281aa9697379ea444",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/pre-merge-commit.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/pre-merge-commit.sample",
+            "size": 416,
+            "md5": "39cb268e2a85d436b9eb6f47614c3cbc",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/pre-push.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/pre-push.sample",
+            "size": 1374,
+            "md5": "2c642152299a94e05ea26eae11993b13",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/pre-rebase.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/pre-rebase.sample",
+            "size": 4898,
+            "md5": "56e45f2bcbc8226d2b4200f7c46371bf",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/pre-receive.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/pre-receive.sample",
+            "size": 544,
+            "md5": "2ad18ec82c20af7b5926ed9cea6aeedd",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/prepare-commit-msg.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/prepare-commit-msg.sample",
+            "size": 1492,
+            "md5": "2b5c047bdb474555e1787db32b2d2fc5",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/push-to-checkout.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/push-to-checkout.sample",
+            "size": 2783,
+            "md5": "c7ab00c7784efeadad3ae9b228d4b4db",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/sendemail-validate.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/sendemail-validate.sample",
+            "size": 2308,
+            "md5": "4d67df3a8d5c98cb8565c07e42be0b04",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/hooks/update.sample",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/hooks/update.sample",
+            "size": 3650,
+            "md5": "647ae13c682f7827c22f5fc08a03674e",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/index",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/index",
+            "size": 12420,
+            "md5": "f3df03c9d1e77285d3fd20a5e41cc13b",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/info/exclude",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/info/exclude",
+            "size": 240,
+            "md5": "036208b4a1ab4a235d75c181e685e5a3",
+            "modified": 1786403761
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/logs/HEAD",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/logs/HEAD",
+            "size": 190,
+            "md5": "2087ff69baaf6df5bfa84236d7872d38",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/logs/refs/heads/main",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/logs/refs/heads/main",
+            "size": 190,
+            "md5": "2087ff69baaf6df5bfa84236d7872d38",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/logs/refs/remotes/origin/HEAD",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/logs/refs/remotes/origin/HEAD",
+            "size": 190,
+            "md5": "2087ff69baaf6df5bfa84236d7872d38",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/objects/pack/pack-59717979efc6addf2da22e48d8c9ab32ebe53a1b.idx",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/objects/pack/pack-59717979efc6addf2da22e48d8c9ab32ebe53a1b.idx",
+            "size": 5020,
+            "md5": "ffe60f95b50fa2edf393758bf5e7a39c",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/objects/pack/pack-59717979efc6addf2da22e48d8c9ab32ebe53a1b.pack",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/objects/pack/pack-59717979efc6addf2da22e48d8c9ab32ebe53a1b.pack",
+            "size": 5936492,
+            "md5": "503a954f836be7f0b85c84f1697b95f1",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/objects/pack/pack-59717979efc6addf2da22e48d8c9ab32ebe53a1b.rev",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/objects/pack/pack-59717979efc6addf2da22e48d8c9ab32ebe53a1b.rev",
+            "size": 616,
+            "md5": "4eb5ccbfb5810e065ff36a54ae0f86b7",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/packed-refs",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/packed-refs",
+            "size": 112,
+            "md5": "468fd5643bb3f387b27bb08cca4b8cd4",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/refs/heads/main",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/refs/heads/main",
+            "size": 41,
+            "md5": "f468a7b01b0c14f8114fe809d2f176a6",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.git/refs/remotes/origin/HEAD",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.git/refs/remotes/origin/HEAD",
+            "size": 30,
+            "md5": "98b16e0b650190870f1b40bc8f4aec4e",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/.gitignore",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/.gitignore",
+            "size": 17,
+            "md5": "b48e86645136e7df3831fee8e57c825e",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/Bindings.xml",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/Bindings.xml",
+            "size": 1005,
+            "md5": "e18f74ccf617a3077fa648425d2bedf5",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/DialogUI.toc",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/DialogUI.toc",
+            "size": 1412,
+            "md5": "2ae3350cf321b1fc106792546f489d1c",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/docs/book-mode.png",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/docs/book-mode.png",
+            "size": 542038,
+            "md5": "055ed7ce4216990bbfdacfe039663476",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/docs/dark-mode.png",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/docs/dark-mode.png",
+            "size": 223811,
+            "md5": "d845f46636a17a36450f391ba3b78ec8",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/docs/light-mode.png",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/docs/light-mode.png",
+            "size": 441807,
+            "md5": "8c9df5d4fecd924aeac3d4eef0b7b744",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/LICENSE",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/LICENSE",
+            "size": 1090,
+            "md5": "9d280bf3b1ae9ed89d7da6fdf2587536",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/README.md",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/README.md",
+            "size": 6015,
+            "md5": "6a4fdbb4b0296826dda1c42084e2c4d2",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/activeQuestIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/activeQuestIcon.tga",
+            "size": 3363,
+            "md5": "6c55b8e8699ca3dbd9b5bc0cb7b7bf73",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/alchemyGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/alchemyGossipIcon.tga",
+            "size": 2883,
+            "md5": "2b661d40d4f4f07d686b62708d11caa3",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/auctionHouseGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/auctionHouseGossipIcon.tga",
+            "size": 2545,
+            "md5": "2393c964ac7e9e6b4eb4ac9fbaa404be",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/availableQuestIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/availableQuestIcon.tga",
+            "size": 2230,
+            "md5": "d84a161e58855e0a3372f6cc2a1ce6e5",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/bankerGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/bankerGossipIcon.tga",
+            "size": 2590,
+            "md5": "3b4f4fccb7c9f9fd8d952065121c88aa",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/battlemasterGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/battlemasterGossipIcon.tga",
+            "size": 3643,
+            "md5": "05e65baa10d4f785d3610a6ad6081f4d",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/binderGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/binderGossipIcon.tga",
+            "size": 2672,
+            "md5": "12cd280b91377afd941164878231b54d",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/blacksmithingGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/blacksmithingGossipIcon.tga",
+            "size": 3361,
+            "md5": "766164851db7d2df4b1bac9f18c50a5b",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/classTrainerGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/classTrainerGossipIcon.tga",
+            "size": 2675,
+            "md5": "8443db94cf55b2f01ed1930817d19ad0",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/Coin-Copper.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/Coin-Copper.tga",
+            "size": 4114,
+            "md5": "7170004d947a111d6951dcf89b7c560b",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/Coin-Gold.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/Coin-Gold.tga",
+            "size": 4114,
+            "md5": "b526c80eeeecf7f1e1e15651fde9a3f0",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/Coin-Silver.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/Coin-Silver.tga",
+            "size": 4114,
+            "md5": "ea1f8fa00645969c2a997ef14e58cf07",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/cookingGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/cookingGossipIcon.tga",
+            "size": 3725,
+            "md5": "177e4f9dc81190c3fafe4bd8322d8958",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/deeprunTramGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/deeprunTramGossipIcon.tga",
+            "size": 2698,
+            "md5": "713438cc83cf46b0fd6638a3a2bc04e4",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/druidGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/druidGossipIcon.tga",
+            "size": 3712,
+            "md5": "49e22d85ae93c527847831e304f38f35",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/enchantingGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/enchantingGossipIcon.tga",
+            "size": 3832,
+            "md5": "1f99693b66ca1f75d62b235c7be71c92",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/engineeringGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/engineeringGossipIcon.tga",
+            "size": 3877,
+            "md5": "8db2a9f2cce032c25230c69670492f64",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/first aidGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/first%20aidGossipIcon.tga",
+            "size": 3863,
+            "md5": "5e68c4039c5f7a749e0b23bef8722b2e",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/fishingGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/fishingGossipIcon.tga",
+            "size": 2573,
+            "md5": "caf24d4c247d17a21e2e4b44dc10693c",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/flightGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/flightGossipIcon.tga",
+            "size": 2800,
+            "md5": "62040e307f813dd79e0f2ff9ee1a7fc2",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/gossipGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/gossipGossipIcon.tga",
+            "size": 2454,
+            "md5": "e0905d1a1f57b099679745b191c127b1",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/GossipIcons.xcf",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/GossipIcons.xcf",
+            "size": 106195,
+            "md5": "4420770fbb61a819172d27df8e759bf1",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/guildMasterGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/guildMasterGossipIcon.tga",
+            "size": 2754,
+            "md5": "338a0414ae5234480b966454750f26f6",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/herbalismGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/herbalismGossipIcon.tga",
+            "size": 2993,
+            "md5": "95175f844a87afe221aee2b2569071b0",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/hunterGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/hunterGossipIcon.tga",
+            "size": 2429,
+            "md5": "d91885c5e5686255c389b364af2532ae",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/innKeeperGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/innKeeperGossipIcon.tga",
+            "size": 2672,
+            "md5": "12cd280b91377afd941164878231b54d",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/inscriptionGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/inscriptionGossipIcon.tga",
+            "size": 3888,
+            "md5": "d311eeff08284e30df9060a5f627fd06",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/jewelcraftingGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/jewelcraftingGossipIcon.tga",
+            "size": 3668,
+            "md5": "802e99055acfca679d752a81c9562324",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/leatherworkingGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/leatherworkingGossipIcon.tga",
+            "size": 2759,
+            "md5": "e5f3965ac7d22d3e8a284f920e3b16d7",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/mageGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/mageGossipIcon.tga",
+            "size": 3908,
+            "md5": "3b90ffb2c8ba885ca14957e4ec258708",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/mailboxGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/mailboxGossipIcon.tga",
+            "size": 2404,
+            "md5": "a70543a9008b4f9bc39959e99514db96",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/miningGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/miningGossipIcon.tga",
+            "size": 3186,
+            "md5": "dc5db83b4609c931488063ad503f632b",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/paladinGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/paladinGossipIcon.tga",
+            "size": 3704,
+            "md5": "62c969a515e54dad477875f6a77b13d5",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/PetitionGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/PetitionGossipIcon.tga",
+            "size": 2737,
+            "md5": "87dc94a2bcef63675e85b852ce05d8cc",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/petTrainer.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/petTrainer.tga",
+            "size": 1988,
+            "md5": "88999806154b744653ce42f0f65be838",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/priestGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/priestGossipIcon.tga",
+            "size": 3178,
+            "md5": "2924c47d8241671242a1308d39ae4bc0",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/professionTrainerGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/professionTrainerGossipIcon.tga",
+            "size": 2577,
+            "md5": "760e4be45e2ef4e8f98fe104ccb7a0a5",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/rogueGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/rogueGossipIcon.tga",
+            "size": 3572,
+            "md5": "6147b83575bd2aea5d30b8a22d6354ba",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/shamanGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/shamanGossipIcon.tga",
+            "size": 3653,
+            "md5": "39534370077587f499b4d745fa16f7a1",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/skinningGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/skinningGossipIcon.tga",
+            "size": 3303,
+            "md5": "7acefe300e5ee1e865334cff9b0a936f",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/stablemasterGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/stablemasterGossipIcon.tga",
+            "size": 3182,
+            "md5": "13ad2ca2e1c7500a1360185c2193dc91",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/tailoringGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/tailoringGossipIcon.tga",
+            "size": 3890,
+            "md5": "925bfb0d1aeb9ced0fe344d22573b3f2",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/trainerGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/trainerGossipIcon.tga",
+            "size": 2924,
+            "md5": "58afbffe60e1dcd6c1ddd8c30723f55f",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/unlearnGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/unlearnGossipIcon.tga",
+            "size": 2649,
+            "md5": "79db57afebec02021acce416e00e0463",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/vendorGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/vendorGossipIcon.tga",
+            "size": 2680,
+            "md5": "4af4660cd8977d19d2dbf4c8952930a7",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/warlockGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/warlockGossipIcon.tga",
+            "size": 3848,
+            "md5": "377510474abf14edad74f7a14b662bf9",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/warriorGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/warriorGossipIcon.tga",
+            "size": 3735,
+            "md5": "51588f1bab4851d5b8c54be224d6b23d",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/icons/weaponsTrainerGossipIcon.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/icons/weaponsTrainerGossipIcon.tga",
+            "size": 3188,
+            "md5": "8ab7728f6cfce2ee1a153a9f0bcf9a3c",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/keys/esc.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/keys/esc.tga",
+            "size": 1470,
+            "md5": "287db35afc97ffe75d6eb223f0b46457",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/keys/space.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/keys/space.tga",
+            "size": 968,
+            "md5": "b624be0075d6ef1cdc0f5034696ef9cd",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/BookPage-Dark.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/BookPage-Dark.tga",
+            "size": 1048620,
+            "md5": "778028ad10ca93d12f72eca7baff2c0f",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/BookPage.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/BookPage.tga",
+            "size": 1048620,
+            "md5": "b729ce4a7d2bbb46d93bb030027a7312",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/ButtonHighlight-Front.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/ButtonHighlight-Front.tga",
+            "size": 420,
+            "md5": "956626f2bccbf8be59d8f05cf0d4b9b0",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/ButtonHighlight-Gossip.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/ButtonHighlight-Gossip.tga",
+            "size": 16402,
+            "md5": "6c4454570d9802df0324f5dfa286006c",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/Divider-H-Dark.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/Divider-H-Dark.tga",
+            "size": 131116,
+            "md5": "3d73be3b2f2844f2759b6ab539b6c2b4",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/Divider-H.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/Divider-H.tga",
+            "size": 131116,
+            "md5": "04a44904c7be611029121b2a5fdedaba",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/Mask-Circle.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/Mask-Circle.tga",
+            "size": 16428,
+            "md5": "defc7db4907b764d46253b6330f34157",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/OptionBackground-Common-Dark.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/OptionBackground-Common-Dark.tga",
+            "size": 65580,
+            "md5": "624f24acab2968d3bcbceaf47fa4b16f",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/OptionBackground-Common-Red.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/OptionBackground-Common-Red.tga",
+            "size": 65580,
+            "md5": "e77cc88c2ea8e3f7772563d223e8cb1d",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/OptionBackground-Common.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/OptionBackground-Common.tga",
+            "size": 65554,
+            "md5": "66fe1e1507d6a66d1f5f1180a2c8a0e3",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/OptionBackground-Grey-Dark.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/OptionBackground-Grey-Dark.tga",
+            "size": 65580,
+            "md5": "9165a1341325f3ad4231f3c61e42c1d3",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/OptionBackground-Grey.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/OptionBackground-Grey.tga",
+            "size": 65554,
+            "md5": "27091a0e3b3ffcd8d468baa955d1298c",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/OptionBackground-Hollow.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/OptionBackground-Hollow.tga",
+            "size": 65554,
+            "md5": "79d7cabbd5bfb76ae3cd8ad1736cdccd",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/Parchment-Dark.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/Parchment-Dark.tga",
+            "size": 1048620,
+            "md5": "b78f8b496e80119eec6bea6f9ec68a3b",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/Parchment.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/Parchment.tga",
+            "size": 1048594,
+            "md5": "334f88536e1aa751ae1f00f4315fbed5",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/ParchmentLayout.xcf",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/ParchmentLayout.xcf",
+            "size": 213623,
+            "md5": "f257294ad1a17ebda618ec40c2950f86",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/PortraitRing-Dark.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/PortraitRing-Dark.tga",
+            "size": 65580,
+            "md5": "12350daba3a98b56e0a28086607bc665",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/PortraitRing.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/PortraitRing.tga",
+            "size": 65580,
+            "md5": "42dd5df9173780cd3392d8be59c6c317",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/RewardChoice-Highlight.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/RewardChoice-Highlight.tga",
+            "size": 65554,
+            "md5": "2f077eb8c3ef461d25874165b0ade323",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/RewardChoice-Pending-Dark.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/RewardChoice-Pending-Dark.tga",
+            "size": 65580,
+            "md5": "4069fbcf6ec965c8b79f221593ea29f1",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/RewardChoice-Pending.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/RewardChoice-Pending.tga",
+            "size": 65554,
+            "md5": "e4784211c9d10d7c137b5813725ea6a5",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/art/parchment/UI-ScrollBar-Knob.tga",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/art/parchment/UI-ScrollBar-Knob.tga",
+            "size": 2209,
+            "md5": "597aebf8d5de21ec5edb55e402524c00",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/font/ARIALN.ttf",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/font/ARIALN.ttf",
+            "size": 134188,
+            "md5": "1cff9f0f000906d82ff543eb55dfbad0",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/font/fonts.xml",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/font/fonts.xml",
+            "size": 2521,
+            "md5": "0d7018aa2d4f55cc6141ad9597da502b",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/font/frizqt__.ttf",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/font/frizqt__.ttf",
+            "size": 37952,
+            "md5": "87cd491cd119e8c7aa48b562d7482ed8",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/assets/font/frizqt___cyr.ttf",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/assets/font/frizqt___cyr.ttf",
+            "size": 96420,
+            "md5": "e786ed54f5aa0a0d6a56100ed239d944",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/auto.lua",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/auto.lua",
+            "size": 6473,
+            "md5": "d971a86b241057b74ebcd5b6e284ee49",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/bindings.lua",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/bindings.lua",
+            "size": 8389,
+            "md5": "3b59dbd9e3ee77053b36ea426886a73b",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/config.lua",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/config.lua",
+            "size": 5128,
+            "md5": "fa26a299c90605279aec9ecc13859af2",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/focus.lua",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/focus.lua",
+            "size": 3922,
+            "md5": "85ac691acc32124dab70b965c124e4c9",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/frames/bookFrame/book.frame.lua",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/frames/bookFrame/book.frame.lua",
+            "size": 8595,
+            "md5": "0de51c4cdef735f060cafea0b1a8da0f",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/frames/bookFrame/book.frame.xml",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/frames/bookFrame/book.frame.xml",
+            "size": 6717,
+            "md5": "434bedb74109f2c2ae28a355993b01c4",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/frames/gossipFrame/gossip.frame.lua",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/frames/gossipFrame/gossip.frame.lua",
+            "size": 18797,
+            "md5": "a2cfbded70038af8410cab58ad7b7e76",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/frames/gossipFrame/gossip.frame.xml",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/frames/gossipFrame/gossip.frame.xml",
+            "size": 37486,
+            "md5": "393e0b318dd0c537ae814f9c6456fc21",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/frames/moneyFrame/money.frame.lua",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/frames/moneyFrame/money.frame.lua",
+            "size": 10082,
+            "md5": "8c6f6cd9bd74d64dd6af506d982bfc36",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/frames/moneyFrame/money.frame.xml",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/frames/moneyFrame/money.frame.xml",
+            "size": 11663,
+            "md5": "f3349cf201e208aa71b183a10db9c615",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/frames/questFrame/quest.frame.lua",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/frames/questFrame/quest.frame.lua",
+            "size": 41088,
+            "md5": "0e6635048d4f91df5d92c3557f9b3e43",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/frames/questFrame/quest.frame.template.xml",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/frames/questFrame/quest.frame.template.xml",
+            "size": 6752,
+            "md5": "23e3eec15bcf5f86e82a1b2c73d2248c",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/frames/questFrame/quest.frame.xml",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/frames/questFrame/quest.frame.xml",
+            "size": 85040,
+            "md5": "40634b06697884e8a45322dea3237e22",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/frames/uiPanelTemplate/ui.panel.template.button.xml",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/frames/uiPanelTemplate/ui.panel.template.button.xml",
+            "size": 1536,
+            "md5": "8f970668ff4f9809873a0f8d252febd0",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/frames/uiPanelTemplate/ui.panel.template.lua",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/frames/uiPanelTemplate/ui.panel.template.lua",
+            "size": 5087,
+            "md5": "f10effc083953604e5b29862ce5359eb",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/frames/uiPanelTemplate/ui.panel.template.xml",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/frames/uiPanelTemplate/ui.panel.template.xml",
+            "size": 8733,
+            "md5": "d2513ee0d9b5ccbb8b0d24c3a3bb7fe5",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/preview/issue-1.png",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/preview/issue-1.png",
+            "size": 47213,
+            "md5": "0257e1c36416788d99b5b5d558830c3f",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/preview/issue-2.png",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/preview/issue-2.png",
+            "size": 89989,
+            "md5": "e48bb119f3a71fb0ef47d2cb4822b8c3",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/preview/Screenshot From 2025-06-18 00-34-14.png",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/preview/Screenshot%20From%202025-06-18%2000-34-14.png",
+            "size": 394445,
+            "md5": "5ad70247854c3bdc234b1b9c0e053876",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/preview/Screenshot From 2025-06-18 00-34-24.png",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/preview/Screenshot%20From%202025-06-18%2000-34-24.png",
+            "size": 389614,
+            "md5": "be0804d38b8bf8895eb529d5c35071be",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/preview/Screenshot From 2025-06-18 00-34-35.png",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/preview/Screenshot%20From%202025-06-18%2000-34-35.png",
+            "size": 390828,
+            "md5": "def3b8070d4535a8f385ed0f4ca1bb3b",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/preview/Screenshot From 2025-06-18 00-35-57.png",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/preview/Screenshot%20From%202025-06-18%2000-35-57.png",
+            "size": 376907,
+            "md5": "11182379977ed9d03800af1ede97556c",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/preview/Screenshot From 2025-06-18 00-37-32.png",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/preview/Screenshot%20From%202025-06-18%2000-37-32.png",
+            "size": 393103,
+            "md5": "201e84e7deb777e2f57b507c2435e9eb",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/preview/Screenshot From 2025-06-18 00-37-38.png",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/preview/Screenshot%20From%202025-06-18%2000-37-38.png",
+            "size": 402793,
+            "md5": "4e63405860d1866063e8d0b6b3ce3680",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/preview/Screenshot From 2025-06-18 00-41-14.png",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/preview/Screenshot%20From%202025-06-18%2000-41-14.png",
+            "size": 398077,
+            "md5": "769da65a95b8e5776b135e05ee61e383",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/preview/Screenshot From 2025-06-18 00-42-06.png",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/preview/Screenshot%20From%202025-06-18%2000-42-06.png",
+            "size": 381154,
+            "md5": "26db9db106b6c527d720bfd1e5bc63c8",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/settings.lua",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/settings.lua",
+            "size": 5079,
+            "md5": "6105f7353bfa30b3fbc4e45650b0827e",
+            "modified": 1786403784
+        },
+        {
+            "path": "Interface/AddOns/DialogUI/src/theme.lua",
+            "url": "https://azeroth-universe.eu/universe_client/Interface/AddOns/DialogUI/src/theme.lua",
+            "size": 9927,
+            "md5": "27fc4945229bfee685f5b0509ac8cca8",
+            "modified": 1786403784
         },
         {
             "path": "msvcm90.dll",
