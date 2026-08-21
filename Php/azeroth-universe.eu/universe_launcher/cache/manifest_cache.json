@@ -1,10 +1,10 @@
 {
     "success": true,
     "version": "3.3.5a",
-    "generated_at": "2026-08-15 20:13:47",
+    "generated_at": "2026-08-22 01:44:43",
     "total_files": 181,
-    "total_size": 74891617318,
-    "total_size_mb": 71422.21,
+    "total_size": 74896116528,
+    "total_size_mb": 71426.5,
     "base_url": "https://azeroth-universe.eu/universe_client/",
     "files": [
         {
@@ -178,9 +178,9 @@
         {
             "path": "Data/enUS/patch-enUS-V.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/enUS/patch-enUS-V.MPQ",
-            "size": 223746464,
-            "md5": "2c8a9da6267155bb63977843fa6ef5e1",
-            "modified": 1786815979
+            "size": 225996064,
+            "md5": "d406ebe0a115c5c8f18f01848eac2d74",
+            "modified": 1787344898
         },
         {
             "path": "Data/enUS/patch-enUS-X.MPQ",
@@ -339,9 +339,9 @@
         {
             "path": "Data/frFR/patch-frFR-W.MPQ",
             "url": "https://azeroth-universe.eu/universe_client/Data/frFR/patch-frFR-W.MPQ",
-            "size": 87457503,
-            "md5": "4350e3df8993a7c9ad10a8252edb273c",
-            "modified": 1786815963
+            "size": 89707113,
+            "md5": "2b362f337dbe5840bac64323176eb125",
+            "modified": 1787344910
         },
         {
             "path": "Data/frFR/patch-frFR-X.MPQ",
